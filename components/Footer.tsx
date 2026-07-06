@@ -48,12 +48,6 @@ export default function Footer() {
           <div>
             <h4 style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 18 }}>Contact</h4>
             <a
-              href="mailto:info@widgeonpoint.org"
-              style={{ display: 'block', fontFamily: F, color: 'rgba(255,255,255,0.72)', textDecoration: 'none', fontSize: 13, fontWeight: 600, marginBottom: 12 }}
-            >
-              info@widgeonpoint.org
-            </a>
-            <a
               href="https://maps.google.com/?q=PO+Box+10779+Portland+ME+04104"
               target="_blank"
               rel="noopener noreferrer"

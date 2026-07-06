@@ -7,7 +7,7 @@ import { carouselImages } from '@/lib/carousel-images';
 
 const CATEGORY_PHOTOS: Record<string, string> = {
   'Community-Based Giving':              'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&auto=format&fit=crop&q=80',
-  'Youth Development':                   'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop&q=80',
+  'Youth Development':                   '/carousel/PIC_ForesidePhotography_SailMaine_SundayJVRegatta_092621_8291-300x200.jpg',
   'Environmental Access & Stewardship':  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80',
   'Cultural Exchange, Arts & Heritage':  'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop&q=80',
   'Discretionary Giving':                'https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=800&auto=format&fit=crop&q=80',
@@ -42,7 +42,7 @@ const CATEGORIES = [
   {
     title: 'Environmental Access & Stewardship',
     color: '#1a6e3e',
-    brief: 'Protecting the natural world and ensuring all people have meaningful, equitable access to the outdoors and wild places.',
+    brief: 'Clean water, healthy ecosystems, and equitable access to the outdoors and their benefits are our priority.',
     subs: [
       { name: 'Outdoor Access & Equity', desc: 'Creating and preserving equitable access to the outdoors for underserved communities.' },
       { name: 'Ecological Conservation', desc: 'Land, water, and habitat conservation and restoration initiatives.' },
@@ -98,7 +98,6 @@ function useReveal() {
 }
 
 function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[0]; index: number }) {
-  const [open, setOpen] = useState(false);
   const photo = CATEGORY_PHOTOS[cat.title];
   return (
     <div
@@ -117,29 +116,8 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[0]; index: number
       </div>
 
       {/* Body */}
-      <div style={{ padding: '18px 22px 22px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-        <p style={{ fontFamily: 'var(--font-body)', fontSize: 13.5, color: '#334D7A', lineHeight: 1.68, marginBottom: 14, flex: 1 }}>{cat.brief}</p>
-
-        {open && (
-          <div style={{ marginBottom: 14, display: 'flex', flexDirection: 'column', gap: 0 }}>
-            {cat.subs.map((s, i) => (
-              <div key={i} style={{ padding: '11px 0', borderBottom: i < cat.subs.length - 1 ? '1px solid rgba(27,81,168,0.07)' : 'none' }}>
-                <div style={{ fontFamily: 'var(--font-montserrat)', fontSize: 11, fontWeight: 700, color: cat.color, marginBottom: 3 }}>{s.name}</div>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, color: '#6B80A8', lineHeight: 1.6, margin: 0 }}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        )}
-
-        <button
-          onClick={() => setOpen(!open)}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-montserrat)', fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: cat.color, padding: 0, display: 'flex', alignItems: 'center', gap: 6, alignSelf: 'flex-start' }}
-        >
-          {open ? 'Show less' : 'Learn more'}
-          <svg width="12" height="12" fill="none" viewBox="0 0 12 12" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.25s' }}>
-            <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
+      <div style={{ padding: '18px 22px 22px', flex: 1 }}>
+        <p style={{ fontFamily: 'var(--font-body)', fontSize: 13.5, color: '#334D7A', lineHeight: 1.68, margin: 0 }}>{cat.brief}</p>
       </div>
     </div>
   );
@@ -243,19 +221,19 @@ export default function HomePage() {
 
               <div style={{ width: 44, height: 2, background: 'linear-gradient(90deg,#F0B429,rgba(240,180,41,0.3))', borderRadius: 2, marginBottom: 24, transformOrigin: 'left', animation: 'growX 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s both' }} />
 
-              <h1 style={{ fontFamily: 'var(--font-montserrat),sans-serif', fontSize: 'clamp(32px,4.2vw,62px)', fontWeight: 900, lineHeight: 1.06, letterSpacing: '-2px', color: '#fff', marginBottom: 24 }}>
-                <span style={{ display: 'block', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both' }}>Supporting</span>
-                <span style={{ display: 'block', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both' }}>Well-Being</span>
-                <span style={{ display: 'block', color: '#F0B429', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.7s both' }}>for All.</span>
+              <h1 style={{ fontFamily: 'var(--font-montserrat),sans-serif', fontSize: 'clamp(28px,3.8vw,56px)', fontWeight: 900, lineHeight: 1.08, letterSpacing: '-1.5px', color: '#fff', marginBottom: 24 }}>
+                <span style={{ display: 'block', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both' }}>
+                  <span style={{ background: '#F0B429', color: '#fff', padding: '0 6px', borderRadius: 4 }}>We aim to spread joy</span>
+                </span>
+                <span style={{ display: 'block', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both' }}>and relieve suffering.</span>
               </h1>
 
               <p style={{ fontSize: 15, fontWeight: 400, color: 'rgba(255,255,255,0.60)', lineHeight: 1.9, maxWidth: 480, marginBottom: 40, animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.9s both' }}>
-                The Widgeon Point Charitable Foundation has supported thousands of worthy causes across the United States for more than fifty years, from the shores of Maine to the mountains of Alaska.
+                The Widgeon Point Charitable Foundation has supported thousands of worthy causes across the United States for more than fifty years.
               </p>
 
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 1.05s both' }}>
                 <Link href="/grant-recipients" className="cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#1B51A8', fontWeight: 800, fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, textDecoration: 'none' }}>View Grant Recipients</Link>
-                <Link href="/apply" className="ghost-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.85)', fontWeight: 800, fontSize: 11, letterSpacing: '1.2px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.22)', backdropFilter: 'blur(8px)' }}>Apply for a Grant</Link>
               </div>
             </div>
           </div>
@@ -297,7 +275,7 @@ export default function HomePage() {
         <div style={{ background: '#fff', padding: '90px 40px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: -60, left: '50%', transform: 'translateX(-50%)', fontSize: 400, fontWeight: 900, color: 'rgba(27,81,168,0.04)', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', fontFamily: 'Georgia,serif' }}>&ldquo;</div>
           <div data-reveal data-delay="0">
-            <blockquote style={{ fontSize: 'clamp(22px,3.5vw,36px)', fontWeight: 800, color: '#0C1B36', maxWidth: 800, margin: '0 auto 24px', lineHeight: 1.3, letterSpacing: '-0.5px' }}>A family legacy of giving, five generations strong, and still going.</blockquote>
+            <blockquote style={{ fontSize: 'clamp(22px,3.5vw,36px)', fontWeight: 800, color: '#0C1B36', maxWidth: 860, margin: '0 auto 24px', lineHeight: 1.3, letterSpacing: '-0.5px' }}>Small groups of thoughtful, committed people change the world. We find them, believe in them, and stand behind them.</blockquote>
             <div style={{ width: 48, height: 2, background: '#F0B429', margin: '0 auto 20px', borderRadius: 2 }} />
             <cite style={{ fontStyle: 'normal', fontSize: 11, fontWeight: 700, color: '#2A69CC', letterSpacing: '2px', textTransform: 'uppercase' }}>Widgeon Point Charitable Foundation</cite>
           </div>
@@ -309,7 +287,7 @@ export default function HomePage() {
             <div data-reveal data-delay="0">
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#1B51A8', display: 'block', marginBottom: 20 }}>Our Mission</span>
               <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 28 }}>We aim to spread joy and relieve suffering.</h2>
-              <p style={{ fontSize: 16, lineHeight: 1.85, color: '#334D7A', marginBottom: 40 }}>The Widgeon Point Charitable Foundation actively supports a wide variety of non-profit organizations across the United States of America.</p>
+              <p style={{ fontSize: 16, lineHeight: 1.85, color: '#334D7A', marginBottom: 40 }}>Widgeon Point Charitable Foundation actively supports a variety of local non-profit organizations across the United States.</p>
               <Link href="/about" className="cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: '#1B51A8', color: '#fff', fontWeight: 800, fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase', padding: '15px 30px', borderRadius: 100, textDecoration: 'none' }}>
                 Learn More
                 <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -340,8 +318,7 @@ export default function HomePage() {
           <div style={{ maxWidth: 1240, margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: 64 }} data-reveal data-delay="0">
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#1B51A8', display: 'block', marginBottom: 20 }}>Areas We Support</span>
-              <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 16 }}>Five focus areas, countless missions</h2>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: '#334D7A', maxWidth: 540, margin: '0 auto' }}>We invest across five interconnected areas, each with specific sub-categories that guide our grantmaking decisions.</p>
+              <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 0 }}>Five focus areas, countless missions</h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 22 }}>
               {CATEGORIES.slice(0, 3).map((cat, i) => <CategoryCard key={i} cat={cat} index={i} />)}
@@ -357,17 +334,17 @@ export default function HomePage() {
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px)', backgroundSize: '32px 32px' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 700px 400px at 50% 120%,rgba(240,180,41,0.12) 0%,transparent 55%)', pointerEvents: 'none' }} />
           <div style={{ position: 'relative', zIndex: 2, padding: '120px 40px', textAlign: 'center', color: '#fff' }} data-reveal data-delay="0">
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#F0B429', display: 'block', marginBottom: 20 }}>Join Our Community</span>
-            <h2 style={{ fontSize: 'clamp(32px,4.5vw,52px)', fontWeight: 900, marginBottom: 22, letterSpacing: '-1.5px', lineHeight: 1.05 }}>Building something<br/>that helps people?</h2>
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#F0B429', display: 'block', marginBottom: 20 }}>Get to Know Us</span>
+            <h2 style={{ fontSize: 'clamp(32px,4.5vw,52px)', fontWeight: 900, marginBottom: 22, letterSpacing: '-1.5px', lineHeight: 1.05 }}>Widgeon Point<br/><span style={{ fontWeight: 300 }}>Charitable Foundation.</span></h2>
             <p style={{ fontSize: 18, opacity: 0.82, maxWidth: 520, margin: '0 auto 16px', lineHeight: 1.85 }}>
-              We want to be part of your impact.
+              Learn who we are, what we believe in, and the kinds of organizations we love to support.
             </p>
             <p style={{ fontSize: 15, opacity: 0.60, maxWidth: 480, margin: '0 auto 44px', lineHeight: 1.9 }}>
-              Tell us about your organization, who you serve, and what you need. Our board reads every application carefully and will get back to you. The more detail you share, the better we can understand your mission.
+              Before you apply, we want you to know us. Understanding our mission and focus areas will help you share your story in a way that resonates with our board.
             </p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/apply" className="cta-btn" style={{ display: 'inline-flex', alignItems: 'center', background: '#fff', color: '#1B51A8', fontWeight: 800, fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase', padding: '17px 36px', borderRadius: 100, textDecoration: 'none' }}>Fill Out the Application</Link>
-              <Link href="/about#who-we-support" className="ghost-btn" style={{ display: 'inline-flex', alignItems: 'center', background: 'rgba(255,255,255,0.10)', color: 'rgba(255,255,255,0.88)', fontWeight: 800, fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase', padding: '17px 36px', borderRadius: 100, textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.28)', backdropFilter: 'blur(8px)' }}>Learn About the Process</Link>
+              <Link href="/about#widgeon-point-today" className="cta-btn" style={{ display: 'inline-flex', alignItems: 'center', background: '#fff', color: '#1B51A8', fontWeight: 800, fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase', padding: '17px 36px', borderRadius: 100, textDecoration: 'none' }}>Who We Are Today</Link>
+              <Link href="/about#who-we-support" className="ghost-btn" style={{ display: 'inline-flex', alignItems: 'center', background: 'rgba(255,255,255,0.10)', color: 'rgba(255,255,255,0.88)', fontWeight: 800, fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase', padding: '17px 36px', borderRadius: 100, textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.28)', backdropFilter: 'blur(8px)' }}>Who We Support</Link>
             </div>
           </div>
         </div>

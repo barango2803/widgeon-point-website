@@ -240,10 +240,8 @@ export default function GrantRecipients() {
 
             {/* Year filter card */}
             <div style={{ background:'#fff', borderRadius:20, padding:'24px 24px 28px', boxShadow:'0 2px 24px rgba(13,50,117,0.08)' }}>
-              <div style={{ fontFamily:F, fontSize:10, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#8899BB', marginBottom:6 }}>Year Range</div>
-              <div style={{ fontFamily:F, fontSize:22, fontWeight:800, color:BLUE, marginBottom:20 }}>
-                {yearMin}&thinsp;&ndash;&thinsp;{yearMax}
-              </div>
+              <div style={{ fontFamily:F, fontSize:10, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#8899BB', marginBottom:12 }}>Year Range</div>
+              <YearInputs yearMin={yearMin} yearMax={yearMax} setYearMin={setYearMin} setYearMax={setYearMax} />
               <DualRangeSlider
                 min={MIN_YEAR} max={MAX_YEAR}
                 valueMin={yearMin} valueMax={yearMax}
@@ -374,6 +372,59 @@ function FilterPill({ label, onRemove }: { label: string; onRemove: () => void }
     <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', background:'#fff', borderRadius:10, padding:'8px 12px' }}>
       <span style={{ fontFamily:F, fontSize:12, fontWeight:600, color:BLUE }}>{label}</span>
       <button onClick={onRemove} style={{ background:'none', border:'none', cursor:'pointer', color:'#8899BB', fontWeight:700, fontSize:16, lineHeight:1, padding:'0 0 0 8px' }}>×</button>
+    </div>
+  );
+}
+
+function YearInputs({ yearMin, yearMax, setYearMin, setYearMax }: {
+  yearMin: number; yearMax: number;
+  setYearMin: (v: number) => void; setYearMax: (v: number) => void;
+}) {
+  const [minStr, setMinStr] = useState(String(yearMin));
+  const [maxStr, setMaxStr] = useState(String(yearMax));
+
+  // Keep display in sync when slider moves
+  useEffect(() => { setMinStr(String(yearMin)); }, [yearMin]);
+  useEffect(() => { setMaxStr(String(yearMax)); }, [yearMax]);
+
+  function handleMinChange(raw: string) {
+    setMinStr(raw);
+    const v = parseInt(raw, 10);
+    if (raw.length === 4 && !isNaN(v) && v >= MIN_YEAR && v < yearMax) setYearMin(v);
+  }
+  function handleMaxChange(raw: string) {
+    setMaxStr(raw);
+    const v = parseInt(raw, 10);
+    if (raw.length === 4 && !isNaN(v) && v > yearMin && v <= MAX_YEAR) setYearMax(v);
+  }
+  function blurMin() {
+    const v = parseInt(minStr, 10);
+    if (!isNaN(v) && v >= MIN_YEAR && v < yearMax) setYearMin(v);
+    else setMinStr(String(yearMin));
+  }
+  function blurMax() {
+    const v = parseInt(maxStr, 10);
+    if (!isNaN(v) && v > yearMin && v <= MAX_YEAR) setYearMax(v);
+    else setMaxStr(String(yearMax));
+  }
+
+  const inputStyle = { fontFamily:F, fontSize:20, fontWeight:800, color:BLUE, border:'1.5px solid #D0DDEF', borderRadius:10, padding:'6px 10px', width:82, textAlign:'center' as const, outline:'none', background:'#F0F4FA' };
+
+  return (
+    <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:20 }}>
+      <input
+        type="text" inputMode="numeric" value={minStr}
+        onChange={e => handleMinChange(e.target.value)}
+        onBlur={blurMin}
+        style={inputStyle}
+      />
+      <span style={{ fontFamily:F, fontSize:16, fontWeight:700, color:'#AAB8CC' }}>to</span>
+      <input
+        type="text" inputMode="numeric" value={maxStr}
+        onChange={e => handleMaxChange(e.target.value)}
+        onBlur={blurMax}
+        style={inputStyle}
+      />
     </div>
   );
 }

@@ -12,12 +12,11 @@ const ANCHOR_LINKS = [
 ];
 
 const TIMELINE = [
-  { year: '1966', title: 'The Foundation is Established', body: 'Edwin J. Beinecke and Linda Louise Beinecke create the Widgeon Point Charitable Foundation, beginning a family tradition of structured, purposeful giving to non-profit organizations across the United States.' },
-  { year: '1970s – 1980s', title: 'Roots in New England', body: 'The Foundation deepens its commitment to New England, supporting arts institutions, land conservation efforts, and community organizations throughout Maine, Connecticut, and New York.' },
-  { year: '1990s', title: 'Second Generation Leadership', body: 'The second generation takes on leadership roles, broadening the Foundation\'s geographic reach and introducing new focus areas including youth development and environmental access.' },
-  { year: '2000s', title: 'A National Scope Emerges', body: 'Grant recipients now span from the Atlantic to the Pacific, reflecting the Foundation\'s commitment to supporting worthy organizations wherever they operate.' },
-  { year: '2010s', title: 'A New Generation of Givers', body: 'Fourth and fifth generation family members join the work, bringing fresh perspectives and renewed energy to the Foundation\'s grantmaking across five evolving focus areas.' },
-  { year: 'Today', title: 'Five Generations Strong', body: 'With five generations of family leadership, Widgeon Point continues to evolve, guided by the same founding values of joy, relief of suffering, and stewardship of the world we share.' },
+  { year: '1966', title: 'A Foundation is Born', body: 'The Kerry Foundation is established, the direct predecessor to Widgeon Point. Its purpose: structured, purposeful giving to nonprofit organizations doing meaningful work across the United States. The Foundation was built on a simple but powerful belief that small, committed organizations can change the world.' },
+  { year: '1970s', title: 'Growing the Legacy', body: 'Following the passing of the Foundation\'s founder Edwin J. Beinecke in 1970, the Edwin J. Beinecke Trust continued his philanthropic vision. The family\'s commitment to giving remained strong, expanding the reach of support to more communities and more causes across the country.' },
+  { year: '1985', title: 'The Beinecke Foundation', body: 'The family\'s giving is formalized under the Beinecke Foundation, carrying forward decades of intentional, relationship-driven philanthropy. The Foundation deepens its focus on nonprofits that work at the community level, trusting local leaders to know what their communities need most.' },
+  { year: '2000s', title: 'Widgeon Point Takes Shape', body: 'The Foundation takes its current name from Widgeon Point, a cherished family gathering place on the coast of Maine, defined by the sea, by family, and by a deep sense of stewardship. The name reflects the values at the heart of the Foundation: rootedness, care for the natural world, and responsibility to others.' },
+  { year: 'Today', title: 'Five Generations Strong', body: 'Now operating as the Widgeon Point Charitable Foundation, the organization is in its fifth generation of family leadership. Each year, the Foundation reviews applications and builds lasting relationships with organizations that are changing lives. Guided by openness, practical problem solving, and belief in the people doing the work that matters.' },
 ];
 
 function FlowerPattern() {
@@ -139,11 +138,12 @@ export default function AboutPage() {
         <FlowerPattern />
         <div style={{ position:'relative', zIndex:2 }}>
           <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:20 }}>About Us</span>
-          <h1 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(36px,5vw,64px)', fontWeight:900, letterSpacing:'-2px', lineHeight:1.05, marginBottom:20, color:'#fff' }}>
-            A Foundation Built<br/>on Generosity
+          <h1 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(36px,5vw,64px)', letterSpacing:'-2px', lineHeight:0.95, marginBottom:20, color:'#fff', fontWeight:400 }}>
+            <span style={{ fontWeight:900 }}>Widgeon Point</span><br/>
+            <span style={{ fontWeight:300, fontSize:'clamp(24px,3.5vw,44px)', lineHeight:1 }}>Charitable Foundation</span>
           </h1>
           <p style={{ fontSize:17, color:'rgba(255,255,255,0.62)', maxWidth:520, margin:'0 auto', lineHeight:1.85 }}>
-            Learn about our history, mission, and the values that have guided five generations of purposeful giving.
+            We give to local non-profits that make their communities a better place to live, work, and breathe.
           </p>
         </div>
       </div>
@@ -216,14 +216,14 @@ export default function AboutPage() {
                   The Foundation's mission is deceptively simple: to spread joy and relieve suffering in all their forms, in all their places. That breadth is intentional. We believe in the power of diverse organizations doing diverse work to collectively build a better world.
                 </p>
                 <p style={{ fontSize:16, lineHeight:1.9, color:'#334D7A' }}>
-                  We support non-profit, IRS registered 501(c)(3) programs, trusting their leadership to decide how best to deploy resources in service of their communities.
+                  We support nonprofit, IRS registered 501(c)(3) organizations, trusting their leadership to deploy resources in the way that best serves their communities.
                 </p>
               </div>
               <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
                 {[
-                  { title:'We are agnostic about cause', body:'Arts, environment, education, social services — we see value across the full spectrum of human endeavor.' },
+                  { title:'We are agnostic about cause', body:'Arts, environment, education, social services. We see value across the full spectrum of human endeavor.' },
                   { title:'We value relationships', body:'Many of our grantees have been partners for decades. We believe in sustained support, not one-time gifts.' },
-                  { title:'We trust organizations', body:'We do not impose program requirements. We fund strong organizations and trust their leadership.' },
+                  { title:'We empower organizations', body:'We believe in your plan and your people. No mandatory program requirements. Just our support behind your vision and execution.' },
                 ].map((c, i) => (
                   <div key={i} className="val-card" style={{ background:'#fff', borderRadius:16, padding:'22px 26px', boxShadow:'0 4px 20px rgba(27,81,168,0.07)' }}>
                     <div style={{ width:28, height:3, background:'#F0B429', borderRadius:2, marginBottom:12 }} />
@@ -250,9 +250,9 @@ export default function AboutPage() {
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:22, marginBottom:36 }}>
               {[
-                { num:'406', label:'Donations Given', sub:'Since our founding in 1966' },
-                { num:'300+', label:'Organizations Supported', sub:'Across the United States' },
-                { num:'5', label:'Focus Areas', sub:'Community, Youth, Environment, Arts, Discretionary' },
+                { num:'1,783', label:'Organizations Supported', sub:'Non-profits across the United States' },
+                { num:'4,600+', label:'Donations Given', sub:'Grants awarded since our founding in 1966' },
+                { num:'5', label:'Focus Areas', sub:'Community, Youth, Environment, Arts & Discretionary' },
               ].map((s, i) => (
                 <div key={i} style={{ background:'linear-gradient(135deg,#071A40,#1B51A8)', borderRadius:20, padding:'36px 28px', textAlign:'center', position:'relative', overflow:'hidden' }}>
                   <div style={{ position:'absolute', inset:0, backgroundImage:'radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px)', backgroundSize:'22px 22px' }} />
@@ -300,7 +300,7 @@ export default function AboutPage() {
               {[
                 { ok:true,  text:'IRS-registered 501(c)(3) organizations' },
                 { ok:true,  text:'Organizations operating within the United States' },
-                { ok:true,  text:'Any organization — new or returning' },
+                { ok:true,  text:'Any organization, new or returning' },
                 { ok:true,  text:'Prior recipients encouraged to apply every year' },
                 { ok:false, text:'Individuals or for-profit entities' },
                 { ok:false, text:'Organizations outside the United States' },
