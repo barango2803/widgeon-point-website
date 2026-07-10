@@ -18,7 +18,7 @@ const ANCHOR_LINKS = [
 const FAQS = [
   {
     q: 'Who is eligible to apply?',
-    a: 'Any IRS-registered 501(c)(3) non-profit organization operating within the United States is welcome to apply. This includes new organizations applying for the first time as well as organizations we have previously funded — returning recipients are always encouraged to apply again each year.',
+    a: 'Any IRS registered 501(c)(3) nonprofit organization operating within the United States is welcome to apply. This includes new organizations applying for the first time as well as organizations we have previously funded. Returning recipients are always encouraged to apply again each year.',
   },
   {
     q: 'How much can we request, and will we receive the full amount?',
@@ -93,7 +93,7 @@ function ContactForm() {
         </svg>
       </div>
       <div style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#8899BB', marginBottom: 6 }}>Send Us a Message</div>
-      <p style={{ fontFamily: F, fontSize: 13, color: '#8899BB', marginBottom: 24, lineHeight: 1.6 }}>We read every message and will get back to you.</p>
+      <p style={{ fontFamily: F, fontSize: 13, color: '#8899BB', marginBottom: 24, lineHeight: 1.6 }}>We receive a high volume of messages. We appreciate your patience and will do our best to respond as soon as possible.</p>
 
       {status === 'sent' ? (
         <div style={{ background: '#EEF8F0', borderRadius: 12, padding: '24px', textAlign: 'center' }}>
@@ -169,7 +169,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p style={{ fontFamily: F, fontSize: 15, color: 'rgba(255,255,255,0.68)', maxWidth: 500, margin: '0 auto', lineHeight: 1.8 }}>
-            We&apos;re here to help. Send us a message, find our addresses, and get answers to common questions below.
+Most questions are answered in our FAQs below. If you still need to reach us, you can use the form or find our addresses here.
           </p>
         </div>
       </section>
@@ -221,27 +221,11 @@ export default function ContactPage() {
               </div>
               <div style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#8899BB', marginBottom: 8 }}>EIN / Federal Tax ID</div>
               <div style={{ fontFamily: F, fontSize: 22, fontWeight: 800, color: BLUE, letterSpacing: '1px' }}>13-6201175</div>
-              <div style={{ fontFamily: F, fontSize: 12, color: '#8899BB', marginTop: 6 }}>IRS-registered 501(c)(3)</div>
+              <div style={{ fontFamily: F, fontSize: 12, color: '#8899BB', marginTop: 6 }}>IRS registered 501(c)(3)</div>
             </div>
           </div>
         </div>
 
-        {/* CTA */}
-        <div style={{ background: `linear-gradient(135deg, ${BLUE} 0%, ${MID} 100%)`, borderRadius: 20, padding: '40px 44px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
-          <div>
-            <div style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: GOLD, marginBottom: 10 }}>Ready to Apply?</div>
-            <div style={{ fontFamily: F, fontSize: 22, fontWeight: 800, color: '#fff', marginBottom: 8 }}>We want to be part of your impact.</div>
-            <div style={{ fontFamily: F, fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>Learn more about our giving areas and eligibility before you apply.</div>
-          </div>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Link href="/about#who-we-support" style={{ fontFamily: F, fontSize: 12, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, background: 'rgba(255,255,255,0.12)', color: '#fff', textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.25)' }}>
-              Learn More
-            </Link>
-            <Link href="/apply" style={{ fontFamily: F, fontSize: 12, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, background: '#fff', color: MID, textDecoration: 'none' }}>
-              Apply Now
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* ── Legal ── */}
@@ -280,9 +264,8 @@ export default function ContactPage() {
               <div style={{ display: 'inline-block', background: '#EEF3FA', borderRadius: 6, padding: '3px 10px', marginBottom: 16 }}>
                 <span style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: MID, letterSpacing: '0.3px' }}>Accounting Firm — Bernstein Shur Sawyer &amp; Nelson, P.A.</span>
               </div>
-              <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9, fontWeight: 600 }}>Widgeon Point Charitable Foundation</div>
-              <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>100 Middle Street, PO Box 9729</div>
-              <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>Portland, ME 04104-5029</div>
+              <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>PO Box 9729</div>
+              <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>Portland, ME 04104</div>
             </div>
           </div>
         </div>
@@ -304,12 +287,9 @@ export default function ContactPage() {
             <div style={{ fontFamily: F, fontSize: 22, fontWeight: 800, color: '#fff', marginBottom: 8 }}>We want to be part of your impact.</div>
             <div style={{ fontFamily: F, fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>Learn about who we support and fill out the application.</div>
           </div>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Link href="/about#who-we-support" style={{ fontFamily: F, fontSize: 12, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, background: 'rgba(255,255,255,0.12)', color: '#fff', textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.25)' }}>
+          <div>
+            <Link href="/about#who-we-support" style={{ fontFamily: F, fontSize: 12, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, background: '#fff', color: MID, textDecoration: 'none' }}>
               Learn More
-            </Link>
-            <Link href="/apply" style={{ fontFamily: F, fontSize: 12, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, background: '#fff', color: MID, textDecoration: 'none' }}>
-              Apply Now
             </Link>
           </div>
         </div>

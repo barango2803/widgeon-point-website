@@ -84,7 +84,7 @@ export default function ApplyPage() {
             <div style={{position:'sticky',top:96}}>
               <div style={{background:'#fff',borderRadius:16,padding:20,boxShadow:'0 2px 16px rgba(27,81,168,0.08)',marginBottom:16,borderLeft:'3px solid #C9A84C'}}>
                 <div style={{fontSize:10,fontWeight:800,letterSpacing:'1.5px',textTransform:'uppercase',color:'#C9A84C',marginBottom:8}}>Open to Everyone</div>
-                <p style={{fontSize:13,lineHeight:1.7,color:'#334D7A',margin:0}}>Any IRS-registered 501(c)(3) in the United States is welcome to apply. New and returning organizations alike.</p>
+                <p style={{fontSize:13,lineHeight:1.7,color:'#334D7A',margin:0}}>Any IRS registered 501(c)(3) in the United States is welcome to apply. New and returning organizations alike.</p>
               </div>
               {[
                 {lbl:'Response Time',    val:'8–12 weeks after submission'},

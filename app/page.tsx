@@ -287,7 +287,7 @@ export default function HomePage() {
             <div data-reveal data-delay="0">
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#1B51A8', display: 'block', marginBottom: 20 }}>Our Mission</span>
               <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 28 }}>We aim to spread joy and relieve suffering.</h2>
-              <p style={{ fontSize: 16, lineHeight: 1.85, color: '#334D7A', marginBottom: 40 }}>Widgeon Point Charitable Foundation actively supports a variety of local non-profit organizations across the United States.</p>
+              <p style={{ fontSize: 16, lineHeight: 1.85, color: '#334D7A', marginBottom: 40 }}>Widgeon Point Charitable Foundation actively supports a variety of local nonprofit organizations across the United States.</p>
               <Link href="/about" className="cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: '#1B51A8', color: '#fff', fontWeight: 800, fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase', padding: '15px 30px', borderRadius: 100, textDecoration: 'none' }}>
                 Learn More
                 <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>

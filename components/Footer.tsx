@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             <p style={{ fontFamily: F, fontSize: 13, lineHeight: 1.85, color: 'rgba(255,255,255,0.55)', maxWidth: 300 }}>
-              We aim to spread joy and relieve suffering by supporting non-profit organizations across the United States.
+              We aim to spread joy and relieve suffering by supporting nonprofit organizations across the United States.
             </p>
           </div>
 
@@ -39,9 +39,7 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <h4 style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 18 }}>Legal</h4>
-            <Link href="/privacy-policy" style={{ display: 'block', fontFamily: F, color: 'rgba(255,255,255,0.62)', textDecoration: 'none', fontSize: 13, fontWeight: 600, marginBottom: 10 }}>Privacy Policy</Link>
-            <Link href="/terms-of-use"   style={{ display: 'block', fontFamily: F, color: 'rgba(255,255,255,0.62)', textDecoration: 'none', fontSize: 13, fontWeight: 600, marginBottom: 10 }}>Terms of Use</Link>
-            <div style={{ fontFamily: F, color: 'rgba(255,255,255,0.38)', fontSize: 12, fontWeight: 600, marginTop: 16 }}>EIN: 13-6201175</div>
+            <div style={{ fontFamily: F, color: 'rgba(255,255,255,0.38)', fontSize: 12, fontWeight: 600 }}>EIN: 13-6201175</div>
           </div>
 
           {/* Contact */}
@@ -62,11 +60,7 @@ export default function Footer() {
 
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0', fontFamily: F, fontSize: 11, color: 'rgba(255,255,255,0.32)', letterSpacing: '0.2px' }}>
-          <span>© 2025 Widgeon Point Charitable Foundation. All rights reserved.</span>
-          <div style={{ display: 'flex', gap: 20 }}>
-            <Link href="/privacy-policy" style={{ fontFamily: F, color: 'rgba(255,255,255,0.32)', textDecoration: 'none' }}>Privacy Policy</Link>
-            <Link href="/terms-of-use"   style={{ fontFamily: F, color: 'rgba(255,255,255,0.32)', textDecoration: 'none' }}>Terms of Use</Link>
-          </div>
+          <span>© {new Date().getFullYear()} Widgeon Point Charitable Foundation. All rights reserved.</span>
         </div>
       </div>
     </footer>

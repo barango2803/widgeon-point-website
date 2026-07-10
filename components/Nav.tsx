@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useRef } from 'react';
 
 const ABOUT_LINKS = [
-  { href: '/about#our-story',           label: 'Our Story' },
+  { href: '/our-story',                 label: 'Our Story' },
   { href: '/about#our-mission',         label: 'Our Mission' },
   { href: '/about#widgeon-point-today', label: 'Widgeon Point Today' },
   { href: '/about#who-we-support',      label: 'Who We Support' },

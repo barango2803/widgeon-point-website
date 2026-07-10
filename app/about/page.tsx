@@ -14,7 +14,7 @@ const ANCHOR_LINKS = [
 const TIMELINE = [
   { year: '1966', title: 'A Foundation is Born', body: 'The Kerry Foundation is established, the direct predecessor to Widgeon Point. Its purpose: structured, purposeful giving to nonprofit organizations doing meaningful work across the United States. The Foundation was built on a simple but powerful belief that small, committed organizations can change the world.' },
   { year: '1970s', title: 'Growing the Legacy', body: 'Following the passing of the Foundation\'s founder Edwin J. Beinecke in 1970, the Edwin J. Beinecke Trust continued his philanthropic vision. The family\'s commitment to giving remained strong, expanding the reach of support to more communities and more causes across the country.' },
-  { year: '1985', title: 'The Beinecke Foundation', body: 'The family\'s giving is formalized under the Beinecke Foundation, carrying forward decades of intentional, relationship-driven philanthropy. The Foundation deepens its focus on nonprofits that work at the community level, trusting local leaders to know what their communities need most.' },
+  { year: '1985', title: 'The Beinecke Foundation', body: 'The family\'s giving is formalized under the Beinecke Foundation, carrying forward decades of intentional, relationship driven philanthropy. The Foundation deepens its focus on nonprofits that work at the community level, trusting local leaders to know what their communities need most.' },
   { year: '2000s', title: 'Widgeon Point Takes Shape', body: 'The Foundation takes its current name from Widgeon Point, a cherished family gathering place on the coast of Maine, defined by the sea, by family, and by a deep sense of stewardship. The name reflects the values at the heart of the Foundation: rootedness, care for the natural world, and responsibility to others.' },
   { year: 'Today', title: 'Five Generations Strong', body: 'Now operating as the Widgeon Point Charitable Foundation, the organization is in its fifth generation of family leadership. Each year, the Foundation reviews applications and builds lasting relationships with organizations that are changing lives. Guided by openness, practical problem solving, and belief in the people doing the work that matters.' },
 ];
@@ -143,7 +143,7 @@ export default function AboutPage() {
             <span style={{ fontWeight:300, fontSize:'clamp(24px,3.5vw,44px)', lineHeight:1 }}>Charitable Foundation</span>
           </h1>
           <p style={{ fontSize:17, color:'rgba(255,255,255,0.62)', maxWidth:520, margin:'0 auto', lineHeight:1.85 }}>
-            We give to local non-profits that make their communities a better place to live, work, and breathe.
+            We give to local nonprofits that make their communities a better place to live, work, and breathe.
           </p>
         </div>
       </div>
@@ -154,23 +154,18 @@ export default function AboutPage() {
 
         {/* Our Story */}
         <section id="our-story" style={{ padding:'100px 40px', background:'#fff' }}>
-          <div style={{ maxWidth:1040, margin:'0 auto' }}>
-            <div style={{ textAlign:'center', marginBottom:72 }}>
-              <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Our Story</span>
-              <h2 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(28px,3.5vw,46px)', fontWeight:900, color:'#0C1B36', letterSpacing:'-1.5px', lineHeight:1.05, marginBottom:20 }}>
-                From one family's vision<br/>to a national legacy
-              </h2>
-              <p style={{ fontSize:16, lineHeight:1.85, color:'#6B80A8', maxWidth:580, margin:'0 auto' }}>
-                The Widgeon Point Charitable Foundation takes its name from a cherished gathering place on the coast of Maine, a place defined by the sea, by family, and by a deep sense of stewardship toward the natural world and the people who inhabit it.
-              </p>
-            </div>
-
-            {/* Timeline */}
-            <div style={{ display:'flex', flexDirection:'column', gap:0 }}>
-              {TIMELINE.map((item, i) => (
-                <TimelineItem key={i} item={item} index={i} isLast={i === TIMELINE.length - 1} />
-              ))}
-            </div>
+          <div style={{ maxWidth:640, margin:'0 auto', textAlign:'center' }}>
+            <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Our Story</span>
+            <h2 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(28px,3.5vw,46px)', fontWeight:900, color:'#0C1B36', letterSpacing:'-1.5px', lineHeight:1.05, marginBottom:24 }}>
+              From one family's vision to a national legacy
+            </h2>
+            <p style={{ fontSize:16, lineHeight:1.9, color:'#6B80A8', marginBottom:40 }}>
+              The Widgeon Point Charitable Foundation was established in 1966 by Edwin J. Beinecke, a master builder, civic leader, and philanthropist. Now in its fifth generation of family leadership, the Foundation continues to find, believe in, and stand behind organizations doing meaningful work across the United States.
+            </p>
+            <a href="/our-story" style={{ display:'inline-flex', alignItems:'center', gap:10, fontFamily:'var(--font-montserrat)', fontSize:12, fontWeight:800, letterSpacing:'1px', textTransform:'uppercase', padding:'16px 34px', borderRadius:100, background:'#1B51A8', color:'#fff', textDecoration:'none' }}>
+              Read Our Full Story
+              <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </a>
           </div>
         </section>
 
@@ -222,7 +217,7 @@ export default function AboutPage() {
               <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
                 {[
                   { title:'We are agnostic about cause', body:'Arts, environment, education, social services. We see value across the full spectrum of human endeavor.' },
-                  { title:'We value relationships', body:'Many of our grantees have been partners for decades. We believe in sustained support, not one-time gifts.' },
+                  { title:'We value relationships', body:'Many of our grantees have been partners for decades. We believe in sustained support, not single gifts.' },
                   { title:'We empower organizations', body:'We believe in your plan and your people. No mandatory program requirements. Just our support behind your vision and execution.' },
                 ].map((c, i) => (
                   <div key={i} className="val-card" style={{ background:'#fff', borderRadius:16, padding:'22px 26px', boxShadow:'0 4px 20px rgba(27,81,168,0.07)' }}>
@@ -250,7 +245,7 @@ export default function AboutPage() {
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:22, marginBottom:36 }}>
               {[
-                { num:'1,783', label:'Organizations Supported', sub:'Non-profits across the United States' },
+                { num:'1,783', label:'Organizations Supported', sub:'Nonprofits across the United States' },
                 { num:'4,600+', label:'Donations Given', sub:'Grants awarded since our founding in 1966' },
                 { num:'5', label:'Focus Areas', sub:'Community, Youth, Environment, Arts & Discretionary' },
               ].map((s, i) => (
@@ -275,7 +270,7 @@ export default function AboutPage() {
                 <div>
                   <div style={{ fontSize:14, fontWeight:800, color:'#0C1B36', marginBottom:10 }}>Who Can Apply</div>
                   <p style={{ fontSize:15, lineHeight:1.8, color:'#6B80A8', margin:0 }}>
-                    Any IRS-registered <strong style={{ color:'#1B51A8' }}>501(c)(3) organization</strong> operating within the United States is welcome to apply. Our board may award the full amount requested or a portion of it. Organizations we have supported before are always encouraged to apply again.
+                    Any IRS registered <strong style={{ color:'#1B51A8' }}>501(c)(3) organization</strong> operating within the United States is welcome to apply. Our board may award the full amount requested or a portion of it. Organizations we have supported before are always encouraged to apply again.
                   </p>
                 </div>
               </div>
@@ -298,11 +293,11 @@ export default function AboutPage() {
 
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, marginBottom:48 }}>
               {[
-                { ok:true,  text:'IRS-registered 501(c)(3) organizations' },
+                { ok:true,  text:'IRS registered 501(c)(3) nonprofits' },
                 { ok:true,  text:'Organizations operating within the United States' },
-                { ok:true,  text:'Any organization, new or returning' },
+                { ok:true,  text:'New applicants applying for the first time' },
                 { ok:true,  text:'Prior recipients encouraged to apply every year' },
-                { ok:false, text:'Individuals or for-profit entities' },
+                { ok:false, text:'Individuals or for profit entities' },
                 { ok:false, text:'Organizations outside the United States' },
                 { ok:false, text:'Political campaigns or lobbying organizations' },
                 { ok:false, text:'Organizations not registered with the IRS' },
