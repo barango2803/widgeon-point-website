@@ -39,7 +39,9 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <h4 style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.38)', marginBottom: 18 }}>Legal</h4>
-            <div style={{ fontFamily: F, color: 'rgba(255,255,255,0.38)', fontSize: 12, fontWeight: 600 }}>EIN: 13-6201175</div>
+            <Link href="/privacy-policy" style={{ display: 'block', fontFamily: F, color: 'rgba(255,255,255,0.62)', textDecoration: 'none', fontSize: 13, fontWeight: 600, marginBottom: 10 }}>Privacy Policy</Link>
+            <Link href="/terms-of-use"   style={{ display: 'block', fontFamily: F, color: 'rgba(255,255,255,0.62)', textDecoration: 'none', fontSize: 13, fontWeight: 600, marginBottom: 10 }}>Terms of Use</Link>
+            <div style={{ fontFamily: F, color: 'rgba(255,255,255,0.38)', fontSize: 12, fontWeight: 600, marginTop: 16 }}>EIN: 13-6201175</div>
           </div>
 
           {/* Contact */}
