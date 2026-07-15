@@ -125,10 +125,30 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[0]; index: number
 
 function HeroCarousel() {
   const [cur, setCur] = useState(0);
+  const [loaded, setLoaded] = useState<boolean[]>(() => carouselImages.map(() => false));
+
   useEffect(() => {
-    const t = setInterval(() => setCur(c => (c + 1) % carouselImages.length), 5000);
-    return () => clearInterval(t);
+    carouselImages.forEach((img, i) => {
+      const el = new Image();
+      el.onload = () => setLoaded(prev => { const next = [...prev]; next[i] = true; return next; });
+      el.src = img.src;
+    });
   }, []);
+
+  useEffect(() => {
+    if (!loaded[cur]) return;
+    const t = setInterval(() => {
+      setCur(c => {
+        let next = (c + 1) % carouselImages.length;
+        // skip any not-yet-loaded slides
+        let tries = 0;
+        while (!loaded[next] && tries < carouselImages.length) { next = (next + 1) % carouselImages.length; tries++; }
+        return next;
+      });
+    }, 5000);
+    return () => clearInterval(t);
+  }, [loaded, cur]);
+
   return (
     <>
       {carouselImages.map((img, i) => (
@@ -136,7 +156,7 @@ function HeroCarousel() {
           position: 'absolute', inset: 0,
           backgroundImage: `url(${img.src})`,
           backgroundSize: 'cover', backgroundPosition: 'center',
-          opacity: i === cur ? 1 : 0,
+          opacity: i === cur && loaded[i] ? 1 : 0,
           transition: 'opacity 1.2s ease',
           zIndex: 0,
         }} />
