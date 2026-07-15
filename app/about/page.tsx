@@ -182,12 +182,22 @@ export default function AboutPage() {
           <div className="photo-strip">
             {[...Array(2)].map((_, pass) =>
               [
-                '/carousel/compressed_DSC08240-300x200.jpg',
-                '/carousel/SQUASH_Spinski_66-300x200.jpg',
-                '/carousel/compressed_image0-300x200.jpeg',
-                '/carousel/imgage_0000_On-Belay-Photo-3-300x200.jpg',
-                '/carousel/compressed_DSC02115-300x200.jpg',
-                '/carousel/imgage_0002_On-Belay-Photo-1-300x200.jpg',
+                '/carousel/wp-001.jpg',
+                '/carousel/wp-002.jpg',
+                '/carousel/wp-003.jpg',
+                '/carousel/wp-004.jpg',
+                '/carousel/wp-005.jpg',
+                '/carousel/wp-006.jpg',
+                '/carousel/wp-007.jpg',
+                '/carousel/wp-008.jpg',
+                '/carousel/wp-009.jpg',
+                '/carousel/wp-010.jpg',
+                '/carousel/wp-011.jpg',
+                '/carousel/wp-012.jpg',
+                '/carousel/wp-013.jpg',
+                '/carousel/wp-014.jpg',
+                '/carousel/wp-015.jpg',
+                '/carousel/wp-016.jpg',
               ].map((src, i) => (
                 <div key={`${pass}-${i}`} style={{ width:320, height:220, flexShrink:0, overflow:'hidden', position:'relative' }}>
                   <img src={src} alt="" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block', filter:'brightness(0.85)' }} />

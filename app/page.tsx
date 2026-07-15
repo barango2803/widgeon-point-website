@@ -7,7 +7,7 @@ import { carouselImages } from '@/lib/carousel-images';
 
 const CATEGORY_PHOTOS: Record<string, string> = {
   'Community-Based Giving':              'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&auto=format&fit=crop&q=80',
-  'Youth Development':                   '/carousel/PIC_ForesidePhotography_SailMaine_SundayJVRegatta_092621_8291-300x200.jpg',
+  'Youth Development':                   '/carousel/wp-006.jpg',
   'Environmental Access & Stewardship':  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80',
   'Cultural Exchange, Arts & Heritage':  'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop&q=80',
   'Discretionary Giving':                'https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=800&auto=format&fit=crop&q=80',
@@ -296,9 +296,9 @@ export default function HomePage() {
 
             <div data-reveal data-delay="2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '210px 210px', gap: 14 }}>
               {[
-                { src: '/carousel/compressed_DSC08240-300x200.jpg',                                                       span: true,  num: '54+',   lbl: 'Years of Giving' },
-                { src: '/carousel/SQUASH_Spinski_66-300x200.jpg',                                                         span: false, num: '1,783', lbl: 'Organizations' },
-                { src: '/carousel/imgage_0000_On-Belay-Photo-3-300x200.jpg',                                              span: false, num: '32',    lbl: 'States Reached' },
+                { src: '/carousel/wp-002.jpg', span: true,  num: '54+',   lbl: 'Years of Giving' },
+                { src: '/carousel/wp-007.jpg', span: false, num: '1,783', lbl: 'Organizations' },
+                { src: '/carousel/wp-004.jpg', span: false, num: '32',    lbl: 'States Reached' },
               ].map((c, i) => (
                 <div key={i} className="vis-card" style={{ gridRow: c.span ? 'span 2' : 'auto', borderRadius: 20, overflow: 'hidden', position: 'relative', cursor: 'default' }}>
                   <img className="vimg" src={c.src} alt={c.lbl} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
