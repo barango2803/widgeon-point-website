@@ -83,6 +83,14 @@ export default function Nav() {
 
           <nav style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
 
+            {/* Home */}
+            <Link href="/" style={{
+              textDecoration: 'none', color: path === '/' ? '#1B51A8' : '#334D7A',
+              fontFamily: 'var(--font-montserrat)', fontSize: 12, fontWeight: 700, letterSpacing: '0.8px', textTransform: 'uppercase',
+              padding: '9px 16px', borderRadius: 10,
+              background: path === '/' ? '#EBF2FF' : 'transparent',
+            }}>Home</Link>
+
             {/* About Us */}
             <div style={{ position: 'relative' }} onMouseEnter={open(setAboutOpen, aboutTimer)} onMouseLeave={close(setAboutOpen, aboutTimer)}>
               <Link href="/about" style={{

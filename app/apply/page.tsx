@@ -87,7 +87,7 @@ export default function ApplyPage() {
                 <p style={{fontSize:13,lineHeight:1.7,color:'#334D7A',margin:0}}>Any IRS registered 501(c)(3) in the United States is welcome to apply. New and returning organizations alike.</p>
               </div>
               {[
-                {lbl:'Response Time',    val:'8–12 weeks after submission'},
+                {lbl:'Application Deadline', val:'March 15 to September 15. If awarded, you will hear from us after December 15.'},
                 {lbl:'Award Amount',     val:'Full or partial — board decides based on your application'},
                 {lbl:'Sections',         val:'6 sections · 41 fields'},
                 {lbl:'Questions?',       val:'P.O. Box 10779\nPortland, ME 04104'},

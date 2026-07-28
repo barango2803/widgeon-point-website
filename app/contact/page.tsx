@@ -18,7 +18,7 @@ const ANCHOR_LINKS = [
 const FAQS = [
   {
     q: 'Who is eligible to apply?',
-    a: 'Any IRS registered 501(c)(3) nonprofit organization operating within the United States is welcome to apply. This includes new organizations applying for the first time as well as organizations we have previously funded. Returning recipients are always encouraged to apply again each year.',
+    a: 'IRS registered 501(c)(3) nonprofit organization operating within the United States. This includes new organizations applying for the first time as well as organizations we have previously funded. Previous Grantees are encouraged to apply each year.',
   },
   {
     q: 'How much can we request, and will we receive the full amount?',
@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: 'When will we hear back after submitting?',
-    a: 'Our board reviews all applications and decisions are communicated after December 15. Applications submitted before that date will be considered in the current cycle. We will follow up with the primary contact listed on your application. We appreciate your patience and are grateful for the work your organization is doing.',
+    a: 'After the Grant Committee reviews applications, positive decisions are communicated by December 15. We will follow up with the primary contact. We appreciate your understanding. If you do not receive any communication, your grant application was NOT selected.',
   },
 ];
 
@@ -93,13 +93,13 @@ function ContactForm() {
         </svg>
       </div>
       <div style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#8899BB', marginBottom: 6 }}>Send Us a Message</div>
-      <p style={{ fontFamily: F, fontSize: 13, color: '#8899BB', marginBottom: 24, lineHeight: 1.6 }}>We receive a high volume of messages. We appreciate your patience and will do our best to respond as soon as possible.</p>
+      <p style={{ fontFamily: F, fontSize: 13, color: '#8899BB', marginBottom: 24, lineHeight: 1.6 }}>Due to the an overwhelming number of inquiries, we cannot DO NOT a guarantee a response.</p>
 
       {status === 'sent' ? (
         <div style={{ background: '#EEF8F0', borderRadius: 12, padding: '24px', textAlign: 'center' }}>
           <div style={{ fontSize: 28, marginBottom: 10 }}>✓</div>
           <div style={{ fontFamily: F, fontSize: 15, fontWeight: 700, color: '#1A7A3C', marginBottom: 6 }}>Message sent!</div>
-          <div style={{ fontFamily: F, fontSize: 13, color: '#4A8A62' }}>Thank you. We will be in touch soon.</div>
+          <div style={{ fontFamily: F, fontSize: 13, color: '#4A8A62' }}>Thank you! Due to an overwhelming number of grant inquiries and questions, we cannot guarantee a response.</div>
         </div>
       ) : (
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -169,7 +169,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p style={{ fontFamily: F, fontSize: 15, color: 'rgba(255,255,255,0.68)', maxWidth: 500, margin: '0 auto', lineHeight: 1.8 }}>
-Most questions are answered in our FAQs below. If you still need to reach us, you can use the form or find our addresses here.
+The most common questions are answered in our FAQs below.
           </p>
         </div>
       </section>
@@ -251,7 +251,7 @@ Most questions are answered in our FAQs below. If you still need to reach us, yo
             <div style={{ background: '#F7F8FA', borderRadius: 16, padding: '28px 28px', border: '1px solid rgba(27,81,168,0.08)' }}>
               <div style={{ fontFamily: F, fontSize: 14, fontWeight: 800, color: BLUE, marginBottom: 4 }}>Legal Address</div>
               <div style={{ display: 'inline-block', background: '#EEF3FA', borderRadius: 6, padding: '3px 10px', marginBottom: 16 }}>
-                <span style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: MID, letterSpacing: '0.3px' }}>Legal Counsel — Fox Rothschild LLP</span>
+                <span style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: MID, letterSpacing: '0.3px' }}>Legal Counsel -- FOX ROTHSCHILD LLP</span>
               </div>
               <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>101 Park Avenue</div>
               <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>17th Floor</div>
@@ -262,7 +262,7 @@ Most questions are answered in our FAQs below. If you still need to reach us, yo
             <div style={{ background: '#F7F8FA', borderRadius: 16, padding: '28px 28px', border: '1px solid rgba(27,81,168,0.08)' }}>
               <div style={{ fontFamily: F, fontSize: 14, fontWeight: 800, color: BLUE, marginBottom: 4 }}>Books &amp; Records</div>
               <div style={{ display: 'inline-block', background: '#EEF3FA', borderRadius: 6, padding: '3px 10px', marginBottom: 16 }}>
-                <span style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: MID, letterSpacing: '0.3px' }}>Accounting Firm — Bernstein Shur Sawyer &amp; Nelson, P.A.</span>
+                <span style={{ fontFamily: F, fontSize: 11, fontWeight: 700, color: MID, letterSpacing: '0.3px' }}>Legal counsel -- BERNSTEIN SHUR SAWYER &amp; NELSON P.A.</span>
               </div>
               <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>PO Box 9729</div>
               <div style={{ fontFamily: F, fontSize: 14, color: '#556680', lineHeight: 1.9 }}>Portland, ME 04104</div>
@@ -281,18 +281,6 @@ Most questions are answered in our FAQs below. If you still need to reach us, yo
           {FAQS.map((faq, i) => <FAQItem key={i} q={faq.q} a={faq.a} />)}
         </div>
 
-        <div style={{ marginTop: 48, background: `linear-gradient(135deg, ${BLUE} 0%, ${MID} 100%)`, borderRadius: 20, padding: '40px 44px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
-          <div>
-            <div style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: GOLD, marginBottom: 10 }}>Ready to Take the Next Step?</div>
-            <div style={{ fontFamily: F, fontSize: 22, fontWeight: 800, color: '#fff', marginBottom: 8 }}>We want to be part of your impact.</div>
-            <div style={{ fontFamily: F, fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>Learn about who we support and fill out the application.</div>
-          </div>
-          <div>
-            <Link href="/about#who-we-support" style={{ fontFamily: F, fontSize: 12, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100, background: '#fff', color: MID, textDecoration: 'none' }}>
-              Learn More
-            </Link>
-          </div>
-        </div>
       </section>
 
       <Footer />

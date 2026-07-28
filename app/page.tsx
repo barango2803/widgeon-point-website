@@ -17,7 +17,7 @@ const CATEGORIES = [
   {
     title: 'Community-Based Giving',
     color: '#1B51A8',
-    brief: 'Rooted in local communities, providing direct services, building social cohesion, and addressing the most immediate human needs.',
+    brief: 'Providing direct services, building social resilience, and making connections.',
     subs: [
       { name: 'Food & Basic Needs Security', desc: 'Food kitchens, food banks, meal programs, and clothing/shelter assistance for individuals and families.' },
       { name: 'Substance-Use & Harm Reduction', desc: 'Substance-use disorder treatment, recovery support, and harm-reduction programs.' },
@@ -42,7 +42,7 @@ const CATEGORIES = [
   {
     title: 'Environmental Access & Stewardship',
     color: '#1a6e3e',
-    brief: 'Clean water, healthy ecosystems, and equitable access to the outdoors and their benefits are our priority.',
+    brief: 'Clean water, clean air, and access to the outdoors.',
     subs: [
       { name: 'Outdoor Access & Equity', desc: 'Creating and preserving equitable access to the outdoors for underserved communities.' },
       { name: 'Ecological Conservation', desc: 'Land, water, and habitat conservation and restoration initiatives.' },
@@ -54,7 +54,7 @@ const CATEGORIES = [
   {
     title: 'Cultural Exchange, Arts & Heritage',
     color: '#7B3FA0',
-    brief: 'Fostering understanding across difference through art, music, travel, and programs that celebrate and preserve culture.',
+    brief: 'Fostering art, music, travel, and grass roots programs that celebrate culture.',
     subs: [
       { name: 'International Exchange & Travel', desc: 'Multi-national exchange and travel programs for students and professionals.' },
       { name: 'Urban–Rural Exchange', desc: 'Programs fostering connection and exchange between urban and rural communities.' },
@@ -236,20 +236,20 @@ export default function HomePage() {
             <div style={{ maxWidth: 580 }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.14)', color: 'rgba(255,255,255,0.80)', fontSize: 10, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', padding: '8px 18px', borderRadius: 100, marginBottom: 36, animation: 'fadeIn 0.8s ease 0.2s both' }}>
                 <span style={{ width: 6, height: 6, background: '#F0B429', borderRadius: '50%', display: 'inline-block', boxShadow: '0 0 8px #F0B429' }} />
-                Est. 1966 &nbsp;·&nbsp; Five Generations
+                Established 1966 &nbsp;&nbsp;<em style={{ fontStyle: 'italic', letterSpacing: '2px' }}>WE GIVE</em>
               </div>
 
               <div style={{ width: 44, height: 2, background: 'linear-gradient(90deg,#F0B429,rgba(240,180,41,0.3))', borderRadius: 2, marginBottom: 24, transformOrigin: 'left', animation: 'growX 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s both' }} />
 
-              <h1 style={{ fontFamily: 'var(--font-montserrat),sans-serif', fontSize: 'clamp(28px,3.8vw,56px)', fontWeight: 900, lineHeight: 1.08, letterSpacing: '-1.5px', color: '#fff', marginBottom: 24 }}>
-                <span style={{ display: 'block', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both' }}>
-                  <span style={{ background: '#F0B429', color: '#fff', padding: '0 6px', borderRadius: 4 }}>We aim to spread joy</span>
+              <h1 style={{ fontFamily: 'var(--font-montserrat),sans-serif', lineHeight: 1.08, letterSpacing: '-1.5px', color: '#fff', marginBottom: 24 }}>
+                <span style={{ display: 'block', whiteSpace: 'nowrap', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both' }}>
+                  <span style={{ background: '#F0B429', color: '#fff', padding: '0 6px', borderRadius: 4, fontSize: 'clamp(22px,3.2vw,48px)', fontWeight: 900 }}>We aim to spread joy</span>
                 </span>
-                <span style={{ display: 'block', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both' }}>and relieve suffering.</span>
+                <span style={{ display: 'block', fontSize: 'clamp(22px,3.2vw,48px)', fontWeight: 400, animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both' }}>and relieve suffering.</span>
               </h1>
 
               <p style={{ fontSize: 15, fontWeight: 400, color: 'rgba(255,255,255,0.60)', lineHeight: 1.9, maxWidth: 480, marginBottom: 40, animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.9s both' }}>
-                The Widgeon Point Charitable Foundation has supported thousands of worthy causes across the United States for more than fifty years.
+                The Widgeon Point Charitable Foundation has supported thousands of local non-profit organizations across the United States for more than fifty years.
               </p>
 
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 1.05s both' }}>
@@ -265,7 +265,7 @@ export default function HomePage() {
               { label: 'States Reached', value: '32', sub: 'Across the country' },
               { label: 'Years of Giving', value: '54+', sub: 'And counting' },
             ].map((c, i) => (
-              <div key={i} style={{ background: 'rgba(255,255,255,0.07)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 18, padding: '16px 20px', width: 200, transform: i === 1 ? 'translateX(20px)' : i === 2 ? 'translateX(8px)' : 'none' }}>
+              <div key={i} style={{ background: 'rgba(10,25,70,0.55)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)', border: '1px solid rgba(255,255,255,0.18)', borderRadius: 18, padding: '16px 20px', width: 200, transform: i === 1 ? 'translateX(20px)' : i === 2 ? 'translateX(8px)' : 'none' }}>
                 <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: '#F0B429', marginBottom: 5 }}>{c.label}</div>
                 <div style={{ fontSize: 28, fontWeight: 900, color: '#fff', letterSpacing: '-1.5px', lineHeight: 1 }}>{c.value}</div>
                 <div style={{ fontSize: 11, fontWeight: 500, color: 'rgba(255,255,255,0.40)', marginTop: 5 }}>{c.sub}</div>
@@ -284,10 +284,9 @@ export default function HomePage() {
         <div style={{ background: 'linear-gradient(135deg,#0D3275 0%,#1B51A8 60%,#2A69CC 100%)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px)', backgroundSize: '32px 32px' }} />
           <div style={{ position: 'relative', display: 'flex', flexWrap: 'wrap' }}>
-            <StatCounter num={1966} suffix=""  label="Year Founded"              delay={0} />
-            <StatCounter num={5}    suffix=""  label="Generations of Leadership" delay={1} />
-            <StatCounter num={32}   suffix=""  label="States Reached"            delay={2} />
-            <StatCounter num={5}    suffix=""  label="Focus Areas"               delay={3} />
+            <StatCounter num={1966} suffix=""  label="Year Founded"   delay={0} />
+            <StatCounter num={32}   suffix=""  label="States Reached" delay={1} />
+            <StatCounter num={5}    suffix=""  label="Focus Areas"    delay={2} />
           </div>
         </div>
 
@@ -295,7 +294,7 @@ export default function HomePage() {
         <div style={{ background: '#fff', padding: '90px 40px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: -60, left: '50%', transform: 'translateX(-50%)', fontSize: 400, fontWeight: 900, color: 'rgba(27,81,168,0.04)', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', fontFamily: 'Georgia,serif' }}>&ldquo;</div>
           <div data-reveal data-delay="0">
-            <blockquote style={{ fontSize: 'clamp(22px,3.5vw,36px)', fontWeight: 800, color: '#0C1B36', maxWidth: 860, margin: '0 auto 24px', lineHeight: 1.3, letterSpacing: '-0.5px' }}>Small groups of thoughtful, committed people change the world. We find them, believe in them, and stand behind them.</blockquote>
+            <blockquote style={{ fontSize: 'clamp(22px,3.5vw,36px)', fontWeight: 800, color: '#0C1B36', maxWidth: 860, margin: '0 auto 24px', lineHeight: 1.3, letterSpacing: '-0.5px' }}>We support local organizations, nationwide.</blockquote>
             <div style={{ width: 48, height: 2, background: '#F0B429', margin: '0 auto 20px', borderRadius: 2 }} />
             <cite style={{ fontStyle: 'normal', fontSize: 11, fontWeight: 700, color: '#2A69CC', letterSpacing: '2px', textTransform: 'uppercase' }}>Widgeon Point Charitable Foundation</cite>
           </div>
@@ -338,7 +337,7 @@ export default function HomePage() {
           <div style={{ maxWidth: 1240, margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: 64 }} data-reveal data-delay="0">
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#1B51A8', display: 'block', marginBottom: 20 }}>Areas We Support</span>
-              <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 0 }}>Five focus areas, countless missions</h2>
+              <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 0 }}>Five Focus Areas</h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 22 }}>
               {CATEGORIES.slice(0, 3).map((cat, i) => <CategoryCard key={i} cat={cat} index={i} />)}
@@ -357,10 +356,10 @@ export default function HomePage() {
             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#F0B429', display: 'block', marginBottom: 20 }}>Get to Know Us</span>
             <h2 style={{ fontSize: 'clamp(32px,4.5vw,52px)', fontWeight: 900, marginBottom: 22, letterSpacing: '-1.5px', lineHeight: 1.05 }}>Widgeon Point<br/><span style={{ fontWeight: 300 }}>Charitable Foundation.</span></h2>
             <p style={{ fontSize: 18, opacity: 0.82, maxWidth: 520, margin: '0 auto 16px', lineHeight: 1.85 }}>
-              Learn who we are, what we believe in, and the kinds of organizations we love to support.
+              Learn who we are, what we believe in, and the kinds of organizations we support.
             </p>
             <p style={{ fontSize: 15, opacity: 0.60, maxWidth: 480, margin: '0 auto 44px', lineHeight: 1.9 }}>
-              Before you apply, we want you to know us. Understanding our mission and focus areas will help you share your story in a way that resonates with our board.
+              We support local organizations that are personally known to the Grant Committee, a member of the board, or a friend of the foundation. We do not encourage applications from unknown organizations.
             </p>
             <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/about#widgeon-point-today" className="cta-btn" style={{ display: 'inline-flex', alignItems: 'center', background: '#fff', color: '#1B51A8', fontWeight: 800, fontSize: 12, letterSpacing: '1px', textTransform: 'uppercase', padding: '17px 36px', borderRadius: 100, textDecoration: 'none' }}>Who We Are Today</Link>

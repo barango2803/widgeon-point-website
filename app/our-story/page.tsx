@@ -10,84 +10,62 @@ const GOLD = '#C9A84C';
 const CHAPTERS = [
   {
     year: '1886',
-    title: 'A Builder is Born',
-    body: `Edwin John Beinecke was born in New York City on January 6, 1886, and died in Mount Kisco, NY, on January 21, 1970. His father, Bernhard, had immigrated from Germany in 1865 and built a remarkable life in America — first as a butcher and teamster, then as a meat wholesaler, and ultimately as Chairman of the Board of the Plaza Hotel. The Beinecke Meats building still stands at 33 Great Jones Street in New York City.
+    title: 'The Life of Edwin John Beinecke',
+    body: `Edwin John Beinecke, master builder and business executive, was born New York City, January 6, 1886. Son of Bernhard and Johanna Elizabeth (Weigle) Beinecke. Bernhard came to the United States from Germany in 1865 and settled in New York City, where he was a successful butcher, teamster, meat wholesaler, and Chairman of the Board of the Plaza Hotel. The Beinecke Meats building is still standing at 33 Great Jones St, NY, NY. The Beinecke family consisted of four boys and three girls. (Bernhard Jr. (b.1876), Alice (b.1881), Johanna (b.1882), Theodora (b.1883) Edwin (b.1886), Frederick (b.1887), Walter (b.1888).
 
-The Beinecke family consisted of four boys and three girls: Bernhard Jr., Alice, Johanna, Theodora, Edwin, Frederick, and Walter. Edwin and his two younger brothers, Fritz and Walter, attended Phillips Academy in Andover, Massachusetts, and from that point on moved through life as close friends and lifelong business partners.`,
+Edwin received his preliminary education at Phillips Academy, Andover, Massachusetts, with his two younger brothers (Fritz and Walter), and from that time forward they moved together through life as close friends and business partners. From 1903-1905, Edwin attended Yale University but was rumored to have been removed from his studies for leaving a cow in the dean's office. His business career began in the fall of 1905 when he was employed by the George C. Fuller Company, as the Timekeeper during the construction of the Plaza Hotel.`,
   },
   {
     year: '1905',
-    title: 'A Career Begins',
-    body: `After briefly attending Yale from 1903 to 1905, Edwin launched his career at the George C. Fuller Company, serving as Timekeeper during the construction of the Plaza Hotel. The Timekeeper position was the top job on any large building site — every tradesman's paycheck required his approval. Upon completion of the hotel, Edwin served as master of ceremonies at a tradesman's banquet, where he called the men "the guts of the hotel."
+    title: 'A Builder is made, not born',
+    body: `The Timekeeper position is the top job on any large building site, as every tradesman's paycheck must be approved by the timekeeper, and the job could only have been obtained by the direct influence of his father, a major investor in the new hotel. Upon the completion of the Plaza Hotel, Edwin served as the master of ceremonies for a tradesman's banquet, in which he called the men, "The guts of the hotel."
 
-The Fuller Company quickly recognized his talent. He rose to assistant purchasing agent, then purchasing agent, and was soon entrusted with operations at the United States Realty and Improvement Company, the first Real Estate Investment Trust organized in the country. Through the depths of the Great Depression, from 1936 to 1942, he served as President and Chairman of the Board of both the U.S. Realty Trust and the Plaza Hotel Corporation. During this period, his family briefly occupied the grand penthouse suite atop the Plaza.
+The Fuller Company subsequently hired him as assistant purchasing agent and then purchasing agent. Shortly thereafter he was made responsible for operations at the United States Realty and Improvement Company, the first REIT (Real Estate Investment Trust) organized in this country. In the depths of the Great Depression from 1936 to 1942, he was President and Chairman of the Board of the U.S. Realty Trust and Chairman of the Board of the Plaza Hotel Corporation. For a short while during this period, his family occupied the grand penthouse suite atop the Plaza Hotel.
 
-When the Trust entered bankruptcy, Edwin spun off the George A. Fuller Company and became its President. He served as Chairman of the Board from that year until 1956. Under the Beinecke brothers' leadership, Fuller became one of the world's most respected construction firms, building skyscrapers, major public works, and iconic monuments — including the Lincoln Memorial in Washington, D.C.`,
+Before the Trust entered bankruptcy, he spun the George A. Fuller Company out of the holding company, became the President, and from that year until 1956 he was the Chairman of the Board. As a result of the spin-off, the three Beinecke brothers controlled the marquee building company as a private family business. The George A Fuller Company operated throughout the world constructing skyscrapers, large public works projects, and was known for the use of specialty marble in iconic monuments such as Lincoln Memorial in Washington D.C.`,
   },
   {
     year: '1909',
     title: 'Family Life',
-    body: `On April 22, 1909, Edwin married Linda Louise Maurer, daughter of Henry A. and Linda L. (Yuengling) Maurer, in New York City. He spoke fluent German his entire life; the family spoke German at home before the First World War, though not in public after it.
+    body: `Edwin married Linda Louise, daughter of Henry A. and Linda L. (Yuengling) Maurer on April 22, 1909 in New York City. In religion he was a Universalist and in politics a Republican. He spoke fluent German his entire life. The family spoke German in the house before the Great War, but not in public after it. Upon the occasion of their 50th wedding anniversary, Edwin gave Linda Louise a three-carat green diamond.
 
-Edwin became the father of Sylvia Levine Beinecke on March 25, 1910, and a son, Edwin John Beinecke Jr., on July 1, 1913. As a proud father, he escorted his daughter down the aisle on June 16, 1934, to her wedding to Dr. John Newbold Robinson, with a reception in the Grand Ballroom of the Plaza Hotel beneath a glade of aspens.`,
+Edwin became the father of Sylvia Levine Beinecke on March 25, 1910, and a son Edwin John Beinecke Jr on July 1, 1913. As a proud father, he escorted his daughter down the aisle on June 16th, 1934 to her wedding to Dr. John Newbold Robinson, with a reception in the Grand Ballroom of the Plaza Hotel under a glade of aspens. His son, Edwin John Beinecke Jr. was married three times (1) Margaret Haggarty (2) Rosemary O'Neall (3) Helen Bryce.`,
   },
   {
     year: '1917',
-    title: 'Service in the Great War',
-    body: `When the United States entered the First World War, Edwin served as a Captain in the U.S. Army Construction Division, overseeing the construction of two explosive factories in Ohio from 1915 to 1917.
+    title: '1917 to 1945: Army Service and Medal of Freedom',
+    body: `Edwin was celebrated for his service to the country. In the Great War, he served as a Captain, U.S. Army, Construction Division. From 1915 to 1917 he supervised the construction of two explosive factories in Ohio. At some point he was in Europe, and on his way back home through London, he spotted a new type of patented tubular scaffolding and immediately procured a license for its exclusive use in North America. After his discharge, he was appointed a member of the U.S. Senate Commission to study and report on the damage done to federal buildings as the result of the 1918 earthquake in Puerto Rico.
 
-On his return through London, he encountered a new patented tubular scaffolding system. With characteristic entrepreneurial instinct, he secured the exclusive license for its use in North America. After his discharge, he was appointed to the U.S. Senate Commission to assess damage to federal buildings from the 1918 earthquake in Puerto Rico.
-
-His service was not limited to one war. During World War II, Edwin served as Deputy Commissioner of the American Red Cross in Great Britain. When he departed New York in September 1943, his friends presented him with a gold-inscribed Breguet pocket watch. For his work with the American Red Cross, he later received the Medal of Freedom from President Truman, the nation's highest civilian honor.`,
+During World War II, he served as a Deputy Commissioner of the American Red Cross in Great Britain. The timing of this service is uncertain, but he received a gold inscribed Bréguet pocket watch from his friends when he parted in NYC in September 1943. For his work with the American Red Cross in Great Britain, he later received the Medal of Freedom from President Truman, the nation's highest civilian honor.`,
   },
   {
     year: '1923',
-    title: 'S&H Green Stamps',
-    body: `In 1918, Edwin became affiliated with Sperry and Hutchinson Company of New York, and was elected President in 1923. His brothers Frederick and Walter had each married daughters of Thomas A. Sperry, one of the firm's two founders, making Sperry and Hutchinson effectively a Beinecke family enterprise.
+    title: 'Business Interests',
+    body: `Beinecke also had many other major business interests. From 1921-23 he was President of the Henry A. Maurer & Son, manufacturers of hollow tile and firebrick in Barber, NJ. (This must have been his father-in-law's company.) In 1918 he became associated with the Sperry and Hutchinson Company of NY, and was elected President in 1923, Chairman of the Board from 1932 to 1960, and he remained a director and later a majority shareholder until his death. His two brothers Frederick and Walter Beinecke married daughters of Thomas A Sperry, one of the two founders of the firm, and thus Sperry and Hutchinson essentially became a Beinecke family business.
 
-Founded in 1896, the company offered retail customers a simple incentive: pay cash, collect stamps, redeem them for goods. A profit was generated on the difference between the income from the stamp service and the cost of merchandise. Approximately 4% of stamps were never redeemed, allowing the company to provide better quality goods to those who did. The "float" — money held between when stamps were paid for by merchants and when they were redeemed by savers — was invested in profitable enterprises to generate the bulk of the company's income.
+The firm was organized in 1896 by Sperry and Shelly B. Hutchinson as a stamp plan which provided a discount to retail customers who paid cash instead of using credit to make purchases. Distributed through participating merchants, the stamps were later redeemed for goods. A profit was generated on the difference between the income from the stamp service and the cost of the merchandise. About 4% of the stamps were not redeemed, allowing the company to provide better quality merchandise to those who did redeem them. "Float," the money held by the company between the time the stamps were paid for by the merchants and the time they were redeemed by the savers was invested in many profitable enterprises to generate the bulk of the company's income.
 
-Edwin served as President from 1923, Chairman of the Board from 1932 to 1960, and remained a director and majority shareholder until his death. Under his leadership, company sales grew from approximately $5 million in 1923 to $369 million by 1969. By the time of his death in 1970, S&H Green Stamps employed 16,000 people, printed 10 billion stamps distributed through 65,000 retail centers, served 20 million customers across 800 redemption centers, and maintained stockholder equity of $181 million.
+In decades of business, Sperry & Hutchinson acquired Bigelow-Sanford, Inc, a carpet maker; State National Bank of Connecticut; The Gunlocke Co, Inc, Wayland, N.Y.; Lea Industries, Inc., Richmond, VA; American Drew, N. Wilkesboro, N.C.; Daystrom Furniture, Inc., South Boston, VA; Bayly, Martin & Fay, an insurance business; Hens and Kelly, department store; and Paragon Design, Waynesboro, Va. Under the Beineckes direction, the company sales increased from approximately $5 Million in 1923 to $369 Million in 1969. By 1970, the S&H Green Stamps employed 16,000 people, printed 10 billion stamps that were distributed at 65,000 retail centers, had 20 million customers visit its 800 redemption centers, and maintained stockholder equity of $181 Million dollars.
 
-Over the decades, Sperry and Hutchinson expanded into a diverse portfolio of companies, including Bigelow-Sanford (carpets), State National Bank of Connecticut, The Gunlocke Company, Lea Industries, American Drew, Daystrom Furniture, Bayly, Martin and Fay (insurance), Hens and Kelly (department stores), and Paragon Design of Waynesboro, Virginia.`,
-  },
-  {
-    year: '1930s',
-    title: 'A Life in Business',
-    body: `Beyond his principal roles at Fuller and Sperry and Hutchinson, Edwin was an officer in at least 18 other businesses throughout his career. His board memberships included Manufacturers Hanover Trust Co., The Patent Scaffolding Co., Chesebro-Whitman Co., Curtiss-Wright Corp., Savoy Plaza, the Waldorf Astoria Corp., Tiffany and Co., and the Hoving Corp. in New York City; The Rockwood Alabama Stone Co. in Rockwood, AL; Cutler Mail Chute Co. in Rochester, NY; The Wurzburg Co. in Grand Rapids, MI; Hens and Kelly in Buffalo, NY; and the Stover Lock Nut and Machinery Co. in Easton, PA.
-
-From 1921 to 1923, he also served as President of Henry A. Maurer and Son, manufacturers of hollow tile and firebrick in Barber, New Jersey.
-
-He was a member of the Bibliographical Society of America, the Clubmobile Association, several Chambers of Commerce, and the Committee of Twenty-Five of Palm Springs, California. His club memberships included the Yale, Lawyers, Grolier, Whitehall, and Regency Whist Clubs of New York City; the Savile and Portland Clubs of London; the Blind Brook Club of Port Chester, NY; and the Bath and Tennis Club and the Everglades Club of Palm Beach, Florida.`,
+In addition, at various times, Beinecke was an officer in at least 18 other businesses, and he served on the boards of directors of Manufacturers Hanover Trust Co., The Patent Scaffolding Co.,Inc., Cheseboro Whitman Co., Curtiss-Wright Corp., Savoy Plaza,Inc., Waldorf Astoria Corp., Tiffany & Co., and the Hoving Corp., all in NYC; The Rockwood Alabama Stone Co., Rockwood AL; Cutler Mail Chute Co., Rochester, N.Y., The Wurzburg Co., Grand Rapids, MI; Hens and Kelly, Buffalo, NY, and the Stover Lock Nut & Machinery Co., Easton, PA.`,
   },
   {
     year: '1963',
-    title: 'The Beinecke Library at Yale',
-    body: `Edwin had a deep and enduring relationship with Yale University. Beginning in 1949, he served as Chairman of the Yale Library Association and received the Yale Alumni Medal in 1953, the same year he transitioned to a role as lifetime trustee of the library associates.
+    title: 'The Beinecke Library at Yale, Collecting, and Social Honors',
+    body: `Beinecke was a generous patron of Yale University. Starting in 1949, Edwin became the Chairman of the Yale Library Association. He received the Yale Alumni Medal in 1953, the same year he transitioned into a role as a lifetime trustee of the library associates. He and his brothers donated the Beinecke Rare Book and Manuscript Library to Yale. The gift included the building in which the library operates. It is made of translucent Danby Vermont marble panels set in an innovative steel lattice. The project was completed under the direction of Edwin as President of the George A. Fuller Company, and financed by gifting the company's shares to Yale, who then sold the company to a pre-selected buyer without the need to pay capital gains taxes, netting the university $4 Million dollars required to purchase construction materials.
 
-In one of the most significant acts of philanthropy in Yale's history, Edwin and his brothers donated the Beinecke Rare Book and Manuscript Library — including the building itself, designed with translucent panels of Danby Vermont marble set in an innovative steel lattice. The project was completed under Edwin's direction as President of the George A. Fuller Company, with the financing structured by gifting the company's shares to Yale.
+The gift also included Edwin's collection of rare books, centered on the works of Robert Louis Stevenson; 2,400 fragments of papyri, and, in 1969, one of largest gifts in Yale history, $15.7 Million dollars, to create a permanent endowment. By 1970, the library had more than 250,000 volumes and one million manuscripts. In addition, Beinecke and his two brothers donated an endowment fund for the purchase of general scholarly books for the Sterling Memorial Library at Yale. Through his financial gifts in the 1950s, Yale Library was able to publish works on papyrology, bibliography, Western exploration and discovery. The project was a monument to the three Beinecke brothers love and admiration for each other, in memory of Walter, who was the youngest, but first to pass away.
 
-The gift also included Edwin's personal rare book collection, centered on the works of Robert Louis Stevenson; 2,400 fragments of papyrus; and, in 1969, a $15.7 million endowment — one of the largest gifts in Yale's history at the time. By 1970, the library held more than 250,000 volumes and one million manuscripts. Edwin and his brothers also donated an endowment fund for the purchase of general scholarly books for the Sterling Memorial Library, and through financial gifts in the 1950s, Yale Library was able to publish works on papyrology, bibliography, and Western exploration and discovery.
+A collector of German glass and stoneware, Beinecke donated his collection of 139 pieces to Corning Museum of Glass, NY, in 1957. An additional part of the gift was a collection of research documents on the subject 16th and 17th century enameled glass. A founding fellow of the Museum of Modern Art, NYC, Beinecke was also a life member of the Metropolitan Museum of Art, NYC, active in the Friends of Princeton Library and the Friends of Huntington Library, San Marino CA, and one time Chairman of the Council of Fellows for the Pierpont Morgan Library, NYC. In 1950, he received an honorary L.H.D. degree from Bowdoin College. He was elected an honorary member in 1967 of the Association Internationale de Papyrologues, Brussels, Belgium.
 
-The project stood as a monument to the three brothers' love and admiration for one another, created in memory of Walter, the youngest, who was the first to pass away.`,
+Beinecke was also a member of the Bibliographical Society of America, Clubmobile Association, several Chambers of Commerce, Committee of Twenty-Five of Palm Springs, CA, The Savile and Portland Clubs of London, England, The Whitehall, Yale, Lawyers, Grolier, and Regency Whist Clubs of New York City, The Blind Brook club of Port Chester, NY, and the Bath and Tennis Club and the Everglades clubs of Palm Beach, FL.`,
   },
   {
-    year: '1950s',
-    title: 'Patron of the Arts',
-    body: `Edwin was a man of wide-ranging cultural interests. A collector of German glass and stoneware, he donated his collection of 139 pieces to the Corning Museum of Glass in New York in 1957, along with a collection of research documents on 16th and 17th century enameled glass.
+    year: '1970',
+    title: 'Hobbies and Philanthropy',
+    body: `In addition to his ever-present curiosity in new subjects, Edwin enjoyed azalea and rhododendron collecting, keeping an active greenhouse and employing several full-time gardeners. He planted thousands of daffodils and opened his estate named "Skerryvore" once a year to the public so that others could enjoy the annual flower spectacular.
 
-A founding fellow of the Museum of Modern Art in New York City, Edwin was also a life member of the Metropolitan Museum of Art, active in the Friends of Princeton Library and the Friends of Huntington Library in San Marino, California, and served as Chairman of the Council of Fellows for the Pierpont Morgan Library. He received an honorary L.H.D. degree from Bowdoin College in 1950 and was elected an honorary member of the Association Internationale de Papyrologues in Brussels, Belgium, in 1967.
-
-At home, Edwin cultivated a passion for azalea and rhododendron collecting, maintaining an active greenhouse and employing several full-time gardeners. He planted thousands of daffodils at his estate, "Skerryvore," and opened it once a year to the public so that others could enjoy the annual flower spectacular.`,
-  },
-  {
-    year: '1966',
-    title: 'A Foundation is Born',
-    body: `The Widgeon Point Charitable Foundation is the successor to the Kerry Foundation, established by Edwin in 1966; the Edwin J. Beinecke Trust, established following his passing in 1970; and the Beinecke Foundation, established in 1985.
-
-Edwin's vision was straightforward: structured, purposeful giving to nonprofit organizations doing meaningful work across the United States. He believed that small, committed groups of people could change the world — and he set out to find them and stand behind them.
-
-Now in its fifth generation of family leadership, Widgeon Point continues to be guided by openness to new ideas, practical problem-solving, and a belief that the right support, given consistently, makes all the difference.`,
+He believed in helping charitable organizations where he could actually make a difference. He did not think it wise to send blank checks to organizations he had never heard of, engaged in dubious enterprises. He passed away January 21, 1970.`,
   },
 ];
 

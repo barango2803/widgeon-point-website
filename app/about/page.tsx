@@ -157,10 +157,10 @@ export default function AboutPage() {
           <div style={{ maxWidth:640, margin:'0 auto', textAlign:'center' }}>
             <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Our Story</span>
             <h2 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(28px,3.5vw,46px)', fontWeight:900, color:'#0C1B36', letterSpacing:'-1.5px', lineHeight:1.05, marginBottom:24 }}>
-              From one family's vision to a national legacy
+              WE GIVE
             </h2>
             <p style={{ fontSize:16, lineHeight:1.9, color:'#6B80A8', marginBottom:40 }}>
-              The Widgeon Point Charitable Foundation was established in 1966 by Edwin J. Beinecke, a master builder, civic leader, and philanthropist. Now in its fifth generation of family leadership, the Foundation continues to find, believe in, and stand behind organizations doing meaningful work across the United States.
+              The Widgeon Point Charitable Foundation was established in 1966 by Edwin J. Beinecke, a master builder, civic leader, and visionary book collector. The Beinecke Library is considered one of the most important research libraries in the United States.
             </p>
             <a href="/our-story" style={{ display:'inline-flex', alignItems:'center', gap:10, fontFamily:'var(--font-montserrat)', fontSize:12, fontWeight:800, letterSpacing:'1px', textTransform:'uppercase', padding:'16px 34px', borderRadius:100, background:'#1B51A8', color:'#fff', textDecoration:'none' }}>
               Read Our Full Story
@@ -215,20 +215,20 @@ export default function AboutPage() {
               <div>
                 <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Our Mission</span>
                 <h2 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(28px,3.5vw,44px)', fontWeight:900, color:'#0C1B36', letterSpacing:'-1.5px', lineHeight:1.05, marginBottom:24 }}>
-                  Spreading Joy.<br/>Relieving Suffering.
+                  Spreading Joy.<br/><span style={{ fontWeight:400 }}>Relieving Suffering.</span>
                 </h2>
                 <p style={{ fontSize:16, lineHeight:1.9, color:'#334D7A', marginBottom:20 }}>
-                  The Foundation's mission is deceptively simple: to spread joy and relieve suffering in all their forms, in all their places. That breadth is intentional. We believe in the power of diverse organizations doing diverse work to collectively build a better world.
+                  The Foundation's mission is to spread joy and relieve suffering. We support non-profit leaders who have identified issues we can help solve.
                 </p>
                 <p style={{ fontSize:16, lineHeight:1.9, color:'#334D7A' }}>
-                  We support nonprofit, IRS registered 501(c)(3) organizations, trusting their leadership to deploy resources in the way that best serves their communities.
+                  We support nonprofit, IRS registered 501(c)(3) organizations.
                 </p>
               </div>
               <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
                 {[
-                  { title:'We are agnostic about cause', body:'Arts, environment, education, social services. We see value across the full spectrum of human endeavor.' },
-                  { title:'We value relationships', body:'Many of our grantees have been partners for decades. We believe in sustained support, not single gifts.' },
-                  { title:'We empower organizations', body:'We believe in your plan and your people. No mandatory program requirements. Just our support behind your vision and execution.' },
+                  { title:'We believe in local leadership, local organizations.', body:'Arts, youth, environment, education, and social services.' },
+                  { title:'We value relationships', body:'The better we know an organization, the more likely we are to support the people and the cause.' },
+                  { title:'We fund local organizations that solve local issues', body:'We try to identify new and unfolding opportunities.' },
                 ].map((c, i) => (
                   <div key={i} className="val-card" style={{ background:'#fff', borderRadius:16, padding:'22px 26px', boxShadow:'0 4px 20px rgba(27,81,168,0.07)' }}>
                     <div style={{ width:28, height:3, background:'#F0B429', borderRadius:2, marginBottom:12 }} />
@@ -247,10 +247,10 @@ export default function AboutPage() {
             <div style={{ textAlign:'center', marginBottom:64 }}>
               <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Widgeon Point Today</span>
               <h2 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(28px,3.5vw,44px)', fontWeight:900, color:'#0C1B36', letterSpacing:'-1.5px', lineHeight:1.05, marginBottom:20 }}>
-                Still growing, still giving
+                WE GIVE
               </h2>
               <p style={{ fontSize:16, lineHeight:1.85, color:'#6B80A8', maxWidth:540, margin:'0 auto' }}>
-                After nearly six decades, Widgeon Point remains an active, engaged foundation, reviewing applications each year and building lasting relationships with organizations that are changing lives.
+                Local non-profit leaders are in the best position to spot unfolding opportunities. We fund people and organizations that make change happen.
               </p>
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:22, marginBottom:36 }}>
@@ -272,15 +272,15 @@ export default function AboutPage() {
             <div style={{ background:'#F4F7FF', borderRadius:20, padding:'36px 44px' }}>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:48 }}>
                 <div>
-                  <div style={{ fontSize:14, fontWeight:800, color:'#0C1B36', marginBottom:10 }}>Application Window</div>
+                  <div style={{ fontSize:14, fontWeight:800, color:'#0C1B36', marginBottom:10 }}>APPLICATION DEADLINE</div>
                   <p style={{ fontSize:15, lineHeight:1.8, color:'#6B80A8', margin:0 }}>
-                    We accept applications from <strong style={{ color:'#1B51A8' }}>March 1 through September 15</strong> each year. Applications are reviewed on a rolling basis and we encourage early submission.
+                    We only accept applications between <strong style={{ color:'#1B51A8' }}>March 15 and September 15</strong>.
                   </p>
                 </div>
                 <div>
                   <div style={{ fontSize:14, fontWeight:800, color:'#0C1B36', marginBottom:10 }}>Who Can Apply</div>
                   <p style={{ fontSize:15, lineHeight:1.8, color:'#6B80A8', margin:0 }}>
-                    Any IRS registered <strong style={{ color:'#1B51A8' }}>501(c)(3) organization</strong> operating within the United States is welcome to apply. Our board may award the full amount requested or a portion of it. Organizations we have supported before are always encouraged to apply again.
+                    IRS registered <strong style={{ color:'#1B51A8' }}>501(c)(3) organizations</strong> operating within the United States are allowed to apply. However, the Grant Committee will prioritize applications from local organizations known personally to a member of the foundation.
                   </p>
                 </div>
               </div>
@@ -297,7 +297,7 @@ export default function AboutPage() {
                 Eligibility at a glance
               </h2>
               <p style={{ fontSize:16, lineHeight:1.85, color:'#6B80A8', maxWidth:500, margin:'0 auto' }}>
-                We fund a wide range of causes, but there are clear criteria every applicant must meet.
+                There are basic criteria every applicant must meet.
               </p>
             </div>
 
@@ -323,7 +323,7 @@ export default function AboutPage() {
 
             <div style={{ textAlign:'center' }}>
               <p style={{ fontSize:15, color:'#6B80A8', marginBottom:28, lineHeight:1.7 }}>
-                Ready to apply? The application window is open March 1 through September 15.
+                Ready to apply? The application window is open March 15 to September 15.
               </p>
               <Link href="/apply" className="apply-btn" style={{ display:'inline-flex', alignItems:'center', gap:10, background:'#1B51A8', color:'#fff', fontWeight:800, fontSize:12, letterSpacing:'1px', textTransform:'uppercase', padding:'16px 34px', borderRadius:100, textDecoration:'none' }}>
                 Start Your Application
