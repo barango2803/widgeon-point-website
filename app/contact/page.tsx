@@ -158,10 +158,27 @@ export default function ContactPage() {
 
   return (
     <div style={{ fontFamily: F, background: '#F7F8FA', minHeight: '100vh' }}>
+      <style>{`
+        .contact-hero { padding:88px 40px 72px; }
+        .contact-anchor-nav { position:sticky; top:72px; z-index:200; background:rgba(255,255,255,0.97); backdrop-filter:blur(12px); border-bottom:1px solid rgba(27,81,168,0.08); display:flex; justify-content:center; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+        .contact-anchor-nav::-webkit-scrollbar { display:none; }
+        .contact-section { max-width:1040px; margin:0 auto; padding:72px 40px 64px; }
+        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:48px; }
+        .legal-section { background:#fff; padding:72px 40px; }
+        .faqs-section { max-width:1040px; margin:0 auto; padding:72px 40px 96px; }
+        @media (max-width:768px) {
+          .contact-hero { padding:60px 20px 48px; }
+          .contact-anchor-nav { justify-content:flex-start; }
+          .contact-section { padding:48px 20px 44px; }
+          .contact-grid { grid-template-columns:1fr; }
+          .legal-section { padding:48px 20px; }
+          .faqs-section { padding:48px 20px 64px; }
+        }
+      `}</style>
       <Nav />
 
       {/* Hero */}
-      <section style={{ background: `linear-gradient(150deg, ${BLUE} 0%, ${MID} 100%)`, padding: '88px 40px 72px', position: 'relative', overflow: 'hidden' }}>
+      <section className="contact-hero" style={{ background: `linear-gradient(150deg, ${BLUE} 0%, ${MID} 100%)`, position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/pattern/flower.png)', backgroundSize: '220px 220px', backgroundRepeat: 'repeat', opacity: 0.18, mixBlendMode: 'screen', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', textAlign: 'center' }}>
           <p style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: GOLD, marginBottom: 14 }}>Get in Touch</p>
@@ -175,7 +192,7 @@ The most common questions are answered in our FAQs below.
       </section>
 
       {/* Anchor nav */}
-      <div style={{ position: 'sticky', top: 72, zIndex: 200, background: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(27,81,168,0.08)', display: 'flex', justifyContent: 'center' }}>
+      <div className="contact-anchor-nav">
         {ANCHOR_LINKS.map(({ href, label }) => {
           const id = href.replace('#', '');
           const active = activeSection === id;
@@ -194,11 +211,11 @@ The most common questions are answered in our FAQs below.
       </div>
 
       {/* ── Contact ── */}
-      <section id="contact" style={{ maxWidth: 1040, margin: '0 auto', padding: '72px 40px 64px' }}>
+      <section id="contact" className="contact-section">
         <p style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: GOLD, marginBottom: 12 }}>Reach Us</p>
         <h2 style={{ fontFamily: F, fontSize: 'clamp(24px,3vw,38px)', fontWeight: 800, color: BLUE, margin: '0 0 48px', letterSpacing: '-0.5px' }}>Contact Information</h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 48 }}>
+        <div className="contact-grid">
           {/* Left: Message form */}
           <ContactForm />
 
@@ -229,7 +246,7 @@ The most common questions are answered in our FAQs below.
       </section>
 
       {/* ── Legal ── */}
-      <section id="legal" style={{ background: '#fff', padding: '72px 40px' }}>
+      <section id="legal" className="legal-section">
         <div style={{ maxWidth: 1040, margin: '0 auto' }}>
           <p style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: GOLD, marginBottom: 12 }}>Legal</p>
           <h2 style={{ fontFamily: F, fontSize: 'clamp(24px,3vw,38px)', fontWeight: 800, color: BLUE, margin: '0 0 12px', letterSpacing: '-0.5px' }}>Legal Information</h2>
@@ -272,7 +289,7 @@ The most common questions are answered in our FAQs below.
       </section>
 
       {/* ── FAQs ── */}
-      <section id="faqs" style={{ maxWidth: 1040, margin: '0 auto', padding: '72px 40px 96px' }}>
+      <section id="faqs" className="faqs-section">
         <p style={{ fontFamily: F, fontSize: 10, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: GOLD, marginBottom: 12 }}>Common Questions</p>
         <h2 style={{ fontFamily: F, fontSize: 'clamp(24px,3vw,38px)', fontWeight: 800, color: BLUE, margin: '0 0 48px', letterSpacing: '-0.5px' }}>
           Frequently Asked Questions

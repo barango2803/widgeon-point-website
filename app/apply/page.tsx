@@ -28,7 +28,7 @@ function Section({num,title,children}:{num:number,title:string,children:React.Re
         <span style={{width:28,height:28,borderRadius:'50%',background:'rgba(255,255,255,0.15)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:13,fontWeight:800,color:'#fff',flexShrink:0}}>{num}</span>
         <span style={{fontSize:14,fontWeight:800,color:'#fff',letterSpacing:'0.5px'}}>{title}</span>
       </div>
-      <div style={{padding:'28px 32px'}}>{children}</div>
+      <div className="section-body">{children}</div>
     </div>
   );
 }
@@ -62,11 +62,34 @@ export default function ApplyPage() {
 
   return (
     <>
+      <style>{`
+        .apply-hero { padding:80px 40px 60px; }
+        .apply-wrap { background:#F4F7FF; padding:48px 40px 80px; }
+        .apply-layout { max-width:1160px; margin:0 auto; display:grid; grid-template-columns:260px 1fr; gap:56px; align-items:start; }
+        .apply-sidebar { position:sticky; top:96px; }
+        .row2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+        .row3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+        .addr-row { display:grid; grid-template-columns:1fr 1fr 120px 120px; gap:16px; }
+        .section-body { padding:28px 32px; }
+        @media (max-width:900px) {
+          .apply-layout { grid-template-columns:1fr; gap:32px; }
+          .apply-sidebar { position:static; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        }
+        @media (max-width:600px) {
+          .apply-hero { padding:60px 20px 44px; }
+          .apply-wrap { padding:32px 16px 60px; }
+          .row2 { grid-template-columns:1fr; }
+          .row3 { grid-template-columns:1fr; }
+          .addr-row { grid-template-columns:1fr 1fr; }
+          .apply-sidebar { grid-template-columns:1fr; }
+          .section-body { padding:20px 18px; }
+        }
+      `}</style>
       <Nav />
       <main style={{fontFamily:F}}>
 
         {/* Hero */}
-        <div style={{background:'linear-gradient(140deg,#071A40 0%,#0D3275 50%,#1B51A8 100%)',padding:'80px 40px 60px',color:'#fff',textAlign:'center',position:'relative',overflow:'hidden'}}>
+        <div className="apply-hero" style={{background:'linear-gradient(140deg,#071A40 0%,#0D3275 50%,#1B51A8 100%)',color:'#fff',textAlign:'center',position:'relative',overflow:'hidden'}}>
           <div style={{position:'absolute',inset:0,backgroundImage:'url(/pattern/flower.png)',backgroundSize:'160px 160px',opacity:0.05,pointerEvents:'none'}} />
           <div style={{position:'relative'}}>
             <span style={{fontSize:10,fontWeight:700,letterSpacing:'3px',textTransform:'uppercase',color:'#F0B429',display:'block',marginBottom:14}}>Grant Application</span>
@@ -77,11 +100,11 @@ export default function ApplyPage() {
           </div>
         </div>
 
-        <div style={{background:'#F4F7FF',padding:'48px 40px 80px'}}>
-          <div style={{maxWidth:1160,margin:'0 auto',display:'grid',gridTemplateColumns:'260px 1fr',gap:56,alignItems:'start'}}>
+        <div className="apply-wrap">
+          <div className="apply-layout">
 
             {/* Sidebar */}
-            <div style={{position:'sticky',top:96}}>
+            <div className="apply-sidebar">
               <div style={{background:'#fff',borderRadius:16,padding:20,boxShadow:'0 2px 16px rgba(27,81,168,0.08)',marginBottom:16,borderLeft:'3px solid #C9A84C'}}>
                 <div style={{fontSize:10,fontWeight:800,letterSpacing:'1.5px',textTransform:'uppercase',color:'#C9A84C',marginBottom:8}}>Open to Everyone</div>
                 <p style={{fontSize:13,lineHeight:1.7,color:'#334D7A',margin:0}}>Any IRS registered 501(c)(3) in the United States is welcome to apply. New and returning organizations alike.</p>
@@ -139,7 +162,7 @@ export default function ApplyPage() {
                   <Field label="Full Name" required hint="Name of the person completing and submitting this application.">
                     <input name="submitter_name" style={inp} required />
                   </Field>
-                  <div style={row3}>
+                  <div className="row3">
                     <Field label="Email" required>
                       <input name="submitter_email" type="email" style={inp} required />
                     </Field>
@@ -160,7 +183,7 @@ export default function ApplyPage() {
                   <Field label="Full Name">
                     <input name="second_contact_name" style={inp} />
                   </Field>
-                  <div style={row2}>
+                  <div className="row2">
                     <Field label="Email">
                       <input name="second_contact_email" type="email" style={inp} />
                     </Field>
@@ -175,7 +198,7 @@ export default function ApplyPage() {
                   <Field label="Full Name" required>
                     <input name="exec_name" style={inp} required />
                   </Field>
-                  <div style={row2}>
+                  <div className="row2">
                     <Field label="Email" required>
                       <input name="exec_email" type="email" style={inp} required />
                     </Field>
@@ -203,7 +226,7 @@ export default function ApplyPage() {
                   <Field label="Street Address" required>
                     <input name="org_address" style={inp} required />
                   </Field>
-                  <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 120px 120px',gap:16}}>
+                  <div className="addr-row">
                     <Field label="City" required>
                       <input name="org_city" style={inp} required />
                     </Field>
@@ -237,7 +260,7 @@ export default function ApplyPage() {
                     </Field>
                   </div>
 
-                  <div style={row3}>
+                  <div className="row3">
                     <Field label="Annual Operating Budget (USD)" required hint="Current fiscal year.">
                       <input name="annual_budget" placeholder="$0" style={inp} required />
                     </Field>

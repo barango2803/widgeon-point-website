@@ -100,6 +100,17 @@ export default function OurStoryPage() {
     '/carousel/wp-014.jpg',
     '/carousel/wp-015.jpg',
     '/carousel/wp-016.jpg',
+    '/carousel/wp-017.jpg',
+    '/carousel/wp-018.jpg',
+    '/carousel/wp-019.jpg',
+    '/carousel/wp-020.jpg',
+    '/carousel/wp-021.jpg',
+    '/carousel/wp-022.jpg',
+    '/carousel/wp-023.jpg',
+    '/carousel/wp-024.jpg',
+    '/carousel/wp-025.jpg',
+    '/carousel/wp-026.jpg',
+    '/carousel/wp-027.jpg',
   ];
 
   return (
@@ -113,12 +124,19 @@ export default function OurStoryPage() {
         .photo-strip:hover { animation-play-state: paused; }
         .chapter-card { transition: box-shadow 0.3s; }
         .chapter-card:hover { box-shadow: 0 12px 40px rgba(27,81,168,0.13) !important; }
+        .story-hero { padding:90px 40px 80px; }
+        .story-chapters { max-width:820px; margin:0 auto; padding:96px 40px 120px; }
+        @media (max-width:768px) {
+          .story-hero { padding:64px 20px 56px; }
+          .story-chapters { padding:48px 20px 64px; }
+          .chapter-card { padding:28px 22px !important; }
+        }
       `}</style>
 
       <Nav />
 
       {/* Hero */}
-      <section style={{ position: 'relative', background: 'linear-gradient(140deg,#071A40 0%,#0D3275 55%,#1B51A8 100%)', padding: '90px 40px 80px', color: '#fff', textAlign: 'center', overflow: 'hidden', fontFamily: F }}>
+      <section className="story-hero" style={{ position: 'relative', background: 'linear-gradient(140deg,#071A40 0%,#0D3275 55%,#1B51A8 100%)', color: '#fff', textAlign: 'center', overflow: 'hidden', fontFamily: F }}>
         <FlowerPattern />
         <div style={{ position: 'relative', zIndex: 2 }}>
           <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: GOLD, display: 'block', marginBottom: 16 }}>Our Story</span>
@@ -144,7 +162,7 @@ export default function OurStoryPage() {
 
       {/* Story chapters */}
       <main style={{ fontFamily: F, background: '#F4F7FF' }}>
-        <div style={{ maxWidth: 820, margin: '0 auto', padding: '96px 40px 120px' }}>
+        <div className="story-chapters">
 
           {/* Chapters */}
           {CHAPTERS.map((ch, i) => (

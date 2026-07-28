@@ -219,6 +219,42 @@ export default function HomePage() {
         .vis-card:hover { transform:scale(1.04); box-shadow:0 24px 64px rgba(7,26,64,0.45); }
         .vis-card:hover .vimg { transform:scale(1.07); }
         .vimg { transition:transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+
+        /* ── Responsive ── */
+        .hero-inner { position:relative; z-index:3; width:100%; max-width:1200px; margin:0 auto; padding:0 60px; }
+        .hero-nowrap { white-space:nowrap; }
+        .hero-float-cards { position:absolute; right:6%; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:12px; z-index:3; animation:fadeIn 1s ease 1.3s both; }
+        .hero-scroll-hint { position:absolute; bottom:36px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; z-index:3; animation:fadeIn 1s ease 1.8s both; }
+        .story-section { padding:100px 40px; background:#F4F7FF; }
+        .story-grid { max-width:1240px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:88px; align-items:center; }
+        .story-vis-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:210px 210px; gap:14px; }
+        .areas-section { padding:100px 40px; background:#EBF2FF; }
+        .areas-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+        .areas-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:22px; max-width:820px; margin-left:auto; margin-right:auto; }
+        .quote-section { background:#fff; padding:90px 40px; text-align:center; position:relative; overflow:hidden; }
+        .cta-inner { position:relative; z-index:2; padding:120px 40px; text-align:center; color:#fff; }
+
+        @media (max-width:900px) {
+          .hero-float-cards { display:none; }
+          .hero-inner { padding:0 32px; }
+          .areas-grid-3 { grid-template-columns:1fr 1fr; }
+        }
+        @media (max-width:768px) {
+          .hero-inner { padding:88px 20px 48px; align-self:flex-end; padding-bottom:60px; }
+          .hero-nowrap { white-space:normal; }
+          .hero-scroll-hint { display:none; }
+          .story-section { padding:56px 20px; }
+          .story-grid { grid-template-columns:1fr; gap:36px; }
+          .story-vis-grid { display:none; }
+          .areas-section { padding:56px 20px; }
+          .areas-grid-3 { grid-template-columns:1fr; }
+          .areas-grid-2 { grid-template-columns:1fr; }
+          .quote-section { padding:56px 20px; }
+          .cta-inner { padding:72px 20px; }
+        }
+        @media (max-width:560px) {
+          .areas-grid-3 { grid-template-columns:1fr; }
+        }
       `}</style>
 
       <Nav />
@@ -232,7 +268,7 @@ export default function HomePage() {
             <div key={i} style={{ position: 'absolute', width: r.w, height: r.w, top: r.t, right: r.r, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.05)', zIndex: 2 }} />
           ))}
 
-          <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 1200, margin: '0 auto', padding: '0 60px' }}>
+          <div className="hero-inner">
             <div style={{ maxWidth: 580 }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.14)', color: 'rgba(255,255,255,0.80)', fontSize: 10, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', padding: '8px 18px', borderRadius: 100, marginBottom: 36, animation: 'fadeIn 0.8s ease 0.2s both' }}>
                 <span style={{ width: 6, height: 6, background: '#F0B429', borderRadius: '50%', display: 'inline-block', boxShadow: '0 0 8px #F0B429' }} />
@@ -242,7 +278,7 @@ export default function HomePage() {
               <div style={{ width: 44, height: 2, background: 'linear-gradient(90deg,#F0B429,rgba(240,180,41,0.3))', borderRadius: 2, marginBottom: 24, transformOrigin: 'left', animation: 'growX 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s both' }} />
 
               <h1 style={{ fontFamily: 'var(--font-montserrat),sans-serif', lineHeight: 1.08, letterSpacing: '-1.5px', color: '#fff', marginBottom: 24 }}>
-                <span style={{ display: 'block', whiteSpace: 'nowrap', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both' }}>
+                <span className="hero-nowrap" style={{ display: 'block', animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both' }}>
                   <span style={{ background: '#F0B429', color: '#fff', padding: '0 6px', borderRadius: 4, fontSize: 'clamp(22px,3.2vw,48px)', fontWeight: 900 }}>We aim to spread joy</span>
                 </span>
                 <span style={{ display: 'block', fontSize: 'clamp(22px,3.2vw,48px)', fontWeight: 400, animation: 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both' }}>and relieve suffering.</span>
@@ -259,7 +295,7 @@ export default function HomePage() {
           </div>
 
           {/* Float cards */}
-          <div style={{ position: 'absolute', right: '6%', top: '50%', transform: 'translateY(-50%)', display: 'flex', flexDirection: 'column', gap: 12, zIndex: 3, animation: 'fadeIn 1s ease 1.3s both' }}>
+          <div className="hero-float-cards">
             {[
               { label: 'Organizations Supported', value: '1,783', sub: 'Across the United States', bar: 92 },
               { label: 'States Reached', value: '32', sub: 'Across the country' },
@@ -274,7 +310,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div style={{ position: 'absolute', bottom: 36, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, zIndex: 3, animation: 'fadeIn 1s ease 1.8s both' }}>
+          <div className="hero-scroll-hint">
             <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>Scroll</span>
             <div style={{ width: '1px', height: 40, background: 'linear-gradient(to bottom,rgba(255,255,255,0.5),transparent)', animation: 'bob 2.2s ease-in-out infinite' }} />
           </div>
@@ -291,7 +327,7 @@ export default function HomePage() {
         </div>
 
         {/* ── Mission quote ── */}
-        <div style={{ background: '#fff', padding: '90px 40px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <div className="quote-section">
           <div style={{ position: 'absolute', top: -60, left: '50%', transform: 'translateX(-50%)', fontSize: 400, fontWeight: 900, color: 'rgba(27,81,168,0.04)', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', fontFamily: 'Georgia,serif' }}>&ldquo;</div>
           <div data-reveal data-delay="0">
             <blockquote style={{ fontSize: 'clamp(22px,3.5vw,36px)', fontWeight: 800, color: '#0C1B36', maxWidth: 860, margin: '0 auto 24px', lineHeight: 1.3, letterSpacing: '-0.5px' }}>We support local organizations, nationwide.</blockquote>
@@ -301,8 +337,8 @@ export default function HomePage() {
         </div>
 
         {/* ── Story section ── */}
-        <section style={{ padding: '100px 40px', background: '#F4F7FF' }}>
-          <div style={{ maxWidth: 1240, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 88, alignItems: 'center' }}>
+        <section className="story-section">
+          <div className="story-grid">
             <div data-reveal data-delay="0">
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#1B51A8', display: 'block', marginBottom: 20 }}>Our Mission</span>
               <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 28 }}>We aim to spread joy and relieve suffering.</h2>
@@ -313,7 +349,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div data-reveal data-delay="2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '210px 210px', gap: 14 }}>
+            <div data-reveal data-delay="2" className="story-vis-grid">
               {[
                 { src: '/carousel/wp-002.jpg', span: true,  num: '54+',   lbl: 'Years of Giving' },
                 { src: '/carousel/wp-007.jpg', span: false, num: '1,783', lbl: 'Organizations' },
@@ -333,16 +369,16 @@ export default function HomePage() {
         </section>
 
         {/* ── Areas / Categories ── */}
-        <section style={{ padding: '100px 40px', background: '#EBF2FF' }}>
+        <section className="areas-section">
           <div style={{ maxWidth: 1240, margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: 64 }} data-reveal data-delay="0">
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#1B51A8', display: 'block', marginBottom: 20 }}>Areas We Support</span>
               <h2 style={{ fontSize: 'clamp(28px,3.5vw,44px)', fontWeight: 900, color: '#0C1B36', letterSpacing: '-1.5px', lineHeight: 1.05, marginBottom: 0 }}>Five Focus Areas</h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 22 }}>
+            <div className="areas-grid-3">
               {CATEGORIES.slice(0, 3).map((cat, i) => <CategoryCard key={i} cat={cat} index={i} />)}
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22, marginTop: 22, maxWidth: 820, margin: '22px auto 0' }}>
+            <div className="areas-grid-2">
               {CATEGORIES.slice(3).map((cat, i) => <CategoryCard key={i} cat={cat} index={i + 3} />)}
             </div>
           </div>
@@ -352,7 +388,7 @@ export default function HomePage() {
         <div style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(140deg,#0D3275 0%,#1B51A8 60%,#2A69CC 100%)' }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px)', backgroundSize: '32px 32px' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 700px 400px at 50% 120%,rgba(240,180,41,0.12) 0%,transparent 55%)', pointerEvents: 'none' }} />
-          <div style={{ position: 'relative', zIndex: 2, padding: '120px 40px', textAlign: 'center', color: '#fff' }} data-reveal data-delay="0">
+          <div className="cta-inner" data-reveal data-delay="0">
             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#F0B429', display: 'block', marginBottom: 20 }}>Get to Know Us</span>
             <h2 style={{ fontSize: 'clamp(32px,4.5vw,52px)', fontWeight: 900, marginBottom: 22, letterSpacing: '-1.5px', lineHeight: 1.05 }}>Widgeon Point<br/><span style={{ fontWeight: 300 }}>Charitable Foundation.</span></h2>
             <p style={{ fontSize: 18, opacity: 0.82, maxWidth: 520, margin: '0 auto 16px', lineHeight: 1.85 }}>

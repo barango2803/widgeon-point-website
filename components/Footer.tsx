@@ -5,8 +5,21 @@ const F = 'var(--font-montserrat),sans-serif';
 export default function Footer() {
   return (
     <footer style={{ background: '#0D3275', color: '#fff', paddingTop: 64, fontFamily: F }}>
-      <div style={{ maxWidth: 1240, margin: '0 auto', padding: '0 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40, paddingBottom: 48, borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+      <style>{`
+        .footer-inner { max-width:1240px; margin:0 auto; padding:0 40px; }
+        .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,0.12); }
+        .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding:20px 0; font-size:11px; color:rgba(255,255,255,0.32); letter-spacing:0.2px; }
+        @media (max-width:900px) {
+          .footer-grid { grid-template-columns:1fr 1fr; gap:32px; }
+        }
+        @media (max-width:480px) {
+          .footer-inner { padding:0 20px; }
+          .footer-grid { grid-template-columns:1fr; gap:28px; }
+          .footer-bottom { flex-direction:column; gap:6px; text-align:center; }
+        }
+      `}</style>
+      <div className="footer-inner">
+        <div className="footer-grid">
 
           {/* Logo + mission */}
           <div>
@@ -61,7 +74,7 @@ export default function Footer() {
           </div>
 
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0', fontFamily: F, fontSize: 11, color: 'rgba(255,255,255,0.32)', letterSpacing: '0.2px' }}>
+        <div className="footer-bottom" style={{ fontFamily: F }}>
           <span>© {new Date().getFullYear()} Widgeon Point Charitable Foundation. All rights reserved.</span>
         </div>
       </div>

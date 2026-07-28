@@ -34,27 +34,29 @@ function FlowerPattern() {
 
 function AnchorNav({ active }: { active: string }) {
   return (
-    <div style={{ position:'sticky', top:72, zIndex:200, background:'rgba(255,255,255,0.96)', backdropFilter:'blur(12px)', borderBottom:'1px solid rgba(27,81,168,0.08)', display:'flex', justifyContent:'center', gap:0, padding:'0 40px' }}>
-      {ANCHOR_LINKS.map(({ href, label }) => {
-        const id = href.replace('#','');
-        const isActive = active === id;
-        return (
-          <a
-            key={href}
-            href={href}
-            style={{
-              fontFamily:'var(--font-montserrat)', fontSize:11, fontWeight:700, letterSpacing:'1px', textTransform:'uppercase',
-              padding:'16px 20px', textDecoration:'none',
-              borderBottom: isActive ? '2px solid #1B51A8' : '2px solid transparent',
-              color: isActive ? '#1B51A8' : '#6B80A8',
-              transition:'color 0.2s, border-color 0.2s',
-              whiteSpace:'nowrap',
-            }}
-          >
-            {label}
-          </a>
-        );
-      })}
+    <div style={{ position:'sticky', top:72, zIndex:200, background:'rgba(255,255,255,0.96)', backdropFilter:'blur(12px)', borderBottom:'1px solid rgba(27,81,168,0.08)' }}>
+      <div className="anchor-nav-scroll">
+        {ANCHOR_LINKS.map(({ href, label }) => {
+          const id = href.replace('#','');
+          const isActive = active === id;
+          return (
+            <a
+              key={href}
+              href={href}
+              style={{
+                fontFamily:'var(--font-montserrat)', fontSize:11, fontWeight:700, letterSpacing:'1px', textTransform:'uppercase',
+                padding:'16px 20px', textDecoration:'none',
+                borderBottom: isActive ? '2px solid #1B51A8' : '2px solid transparent',
+                color: isActive ? '#1B51A8' : '#6B80A8',
+                transition:'color 0.2s, border-color 0.2s',
+                whiteSpace:'nowrap',
+              }}
+            >
+              {label}
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -84,12 +86,12 @@ function TimelineItem({ item, index, isLast }: { item: typeof TIMELINE[0]; index
       }}
     >
       {/* Year */}
-      <div style={{ width:140, flexShrink:0, textAlign:'right', paddingRight:20, paddingTop:10 }}>
+      <div className="tl-year">
         <span style={{ fontFamily:'var(--font-montserrat)', fontSize:12, fontWeight:800, color:'#1B51A8', letterSpacing:'0.5px' }}>{item.year}</span>
       </div>
 
       {/* Spine: dot + line */}
-      <div style={{ width:36, flexShrink:0, display:'flex', flexDirection:'column', alignItems:'center' }}>
+      <div className="tl-spine">
         <div style={{ width:14, height:14, borderRadius:'50%', background:'#fff', border:'3px solid #1B51A8', flexShrink:0, marginTop:8, zIndex:1 }} />
         {!isLast && <div style={{ flex:1, width:2, background:'linear-gradient(to bottom,#1B51A8,rgba(27,81,168,0.2))', marginTop:4, borderRadius:2 }} />}
       </div>
@@ -129,12 +131,49 @@ export default function AboutPage() {
         .val-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(27,81,168,0.13) !important; }
         .apply-btn { transition:transform 0.25s, box-shadow 0.25s; }
         .apply-btn:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(27,81,168,0.3); }
+
+        /* Anchor nav scrollable on mobile */
+        .anchor-nav-scroll { display:flex; justify-content:center; gap:0; padding:0 40px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+        .anchor-nav-scroll::-webkit-scrollbar { display:none; }
+        /* Stats grid (today section) */
+        .areas-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+
+        /* Section padding */
+        .about-section { padding:100px 40px; }
+        /* Mission grid */
+        .mission-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+        /* Today grid */
+        .today-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+        /* Support grid */
+        .support-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+        /* Who We Support lists */
+        .eligibility-cols { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+
+        /* Timeline item */
+        .tl-year { width:140px; flex-shrink:0; text-align:right; padding-right:20px; padding-top:10px; }
+        .tl-spine { width:36px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; }
+
+        @media (max-width:768px) {
+          .anchor-nav-scroll { justify-content:flex-start; padding:0 16px; }
+          .about-section { padding:56px 20px; }
+          .mission-grid { grid-template-columns:1fr; gap:36px; }
+          .today-grid { grid-template-columns:1fr; gap:36px; }
+          .support-grid { grid-template-columns:1fr; gap:32px; }
+          .eligibility-cols { grid-template-columns:1fr; }
+          .areas-grid-3 { grid-template-columns:1fr; }
+          /* Timeline: hide left year column, show it inline */
+          .tl-year { width:auto; text-align:left; padding-right:0; padding-top:0; margin-bottom:6px; }
+          .tl-spine { display:none; }
+        }
+        @media (max-width:480px) {
+          .about-hero { padding:72px 20px 56px !important; }
+        }
       `}</style>
 
       <Nav />
 
       {/* Hero */}
-      <div style={{ position:'relative', background:'linear-gradient(140deg,#071A40 0%,#0D3275 55%,#1B51A8 100%)', padding:'110px 40px 90px', color:'#fff', textAlign:'center', overflow:'hidden', fontFamily:'var(--font-montserrat),sans-serif' }}>
+      <div className="about-hero" style={{ position:'relative', background:'linear-gradient(140deg,#071A40 0%,#0D3275 55%,#1B51A8 100%)', padding:'110px 40px 90px', color:'#fff', textAlign:'center', overflow:'hidden', fontFamily:'var(--font-montserrat),sans-serif' }}>
         <FlowerPattern />
         <div style={{ position:'relative', zIndex:2 }}>
           <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:20 }}>About Us</span>
@@ -153,7 +192,7 @@ export default function AboutPage() {
       <main style={{ fontFamily:'var(--font-montserrat),sans-serif' }}>
 
         {/* Our Story */}
-        <section id="our-story" style={{ padding:'100px 40px', background:'#fff' }}>
+        <section id="our-story" className="about-section" style={{ background:'#fff' }}>
           <div style={{ maxWidth:640, margin:'0 auto', textAlign:'center' }}>
             <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Our Story</span>
             <h2 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(28px,3.5vw,46px)', fontWeight:900, color:'#0C1B36', letterSpacing:'-1.5px', lineHeight:1.05, marginBottom:24 }}>
@@ -198,6 +237,17 @@ export default function AboutPage() {
                 '/carousel/wp-014.jpg',
                 '/carousel/wp-015.jpg',
                 '/carousel/wp-016.jpg',
+                '/carousel/wp-017.jpg',
+                '/carousel/wp-018.jpg',
+                '/carousel/wp-019.jpg',
+                '/carousel/wp-020.jpg',
+                '/carousel/wp-021.jpg',
+                '/carousel/wp-022.jpg',
+                '/carousel/wp-023.jpg',
+                '/carousel/wp-024.jpg',
+                '/carousel/wp-025.jpg',
+                '/carousel/wp-026.jpg',
+                '/carousel/wp-027.jpg',
               ].map((src, i) => (
                 <div key={`${pass}-${i}`} style={{ width:320, height:220, flexShrink:0, overflow:'hidden', position:'relative' }}>
                   <img src={src} alt="" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block', filter:'brightness(0.85)' }} />
@@ -209,9 +259,9 @@ export default function AboutPage() {
         </div>
 
         {/* Our Mission */}
-        <section id="our-mission" style={{ padding:'100px 40px', background:'#F4F7FF' }}>
+        <section id="our-mission" className="about-section" style={{ background:'#F4F7FF' }}>
           <div style={{ maxWidth:1040, margin:'0 auto' }}>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:80, alignItems:'center' }}>
+            <div className="mission-grid">
               <div>
                 <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Our Mission</span>
                 <h2 style={{ fontFamily:'var(--font-montserrat)', fontSize:'clamp(28px,3.5vw,44px)', fontWeight:900, color:'#0C1B36', letterSpacing:'-1.5px', lineHeight:1.05, marginBottom:24 }}>
@@ -242,7 +292,7 @@ export default function AboutPage() {
         </section>
 
         {/* Widgeon Point Today */}
-        <section id="widgeon-point-today" style={{ padding:'100px 40px', background:'#fff' }}>
+        <section id="widgeon-point-today" className="about-section" style={{ background:'#fff' }}>
           <div style={{ maxWidth:1040, margin:'0 auto' }}>
             <div style={{ textAlign:'center', marginBottom:64 }}>
               <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Widgeon Point Today</span>
@@ -253,7 +303,7 @@ export default function AboutPage() {
                 Local non-profit leaders are in the best position to spot unfolding opportunities. We fund people and organizations that make change happen.
               </p>
             </div>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:22, marginBottom:36 }}>
+            <div className="areas-grid-3" style={{ marginBottom:36 }}>
               {[
                 { num:'1,783', label:'Organizations Supported', sub:'Nonprofits across the United States' },
                 { num:'4,600+', label:'Donations Given', sub:'Grants awarded since our founding in 1966' },
@@ -270,7 +320,7 @@ export default function AboutPage() {
               ))}
             </div>
             <div style={{ background:'#F4F7FF', borderRadius:20, padding:'36px 44px' }}>
-              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:48 }}>
+              <div className="support-grid">
                 <div>
                   <div style={{ fontSize:14, fontWeight:800, color:'#0C1B36', marginBottom:10 }}>APPLICATION DEADLINE</div>
                   <p style={{ fontSize:15, lineHeight:1.8, color:'#6B80A8', margin:0 }}>
@@ -289,7 +339,7 @@ export default function AboutPage() {
         </section>
 
         {/* Who We Support */}
-        <section id="who-we-support" style={{ padding:'100px 40px', background:'#F4F7FF' }}>
+        <section id="who-we-support" className="about-section" style={{ background:'#F4F7FF' }}>
           <div style={{ maxWidth:1040, margin:'0 auto' }}>
             <div style={{ textAlign:'center', marginBottom:56 }}>
               <span style={{ fontSize:10, fontWeight:700, letterSpacing:'3px', textTransform:'uppercase', color:'#F0B429', display:'block', marginBottom:16 }}>Who We Support</span>
@@ -301,7 +351,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, marginBottom:48 }}>
+            <div className="eligibility-cols" style={{ marginBottom:48 }}>
               {[
                 { ok:true,  text:'IRS registered 501(c)(3) nonprofits' },
                 { ok:true,  text:'Organizations operating within the United States' },
